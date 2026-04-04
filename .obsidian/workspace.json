@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "神族/传说/起源总纲.md",
+                "file": "神族/传说/倒海大洪.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "起源总纲"
+              "title": "倒海大洪"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "神族/传说/起源总纲.md",
+                "file": "神族/传说/倒海大洪.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "起源总纲 的反向链接列表"
+              "title": "倒海大洪 的反向链接列表"
             }
           },
           {
@@ -194,26 +194,32 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dbf804a06812cd66",
+  "active": "7653d2264bcfe098",
   "lastOpenFiles": [
-    "魔与赤血.md",
-    "MEMORY.md",
-    "新建 文本文档.txt",
-    "AGENTS.md",
-    "novel.md",
+    "背景/世界背景.md",
+    "神族/传说/白原受济与第一次收割.md",
+    "神族/传说/性别的起源与变化.md",
+    "神族/传说/镜穹文明.md",
+    "神族/传说/倒海大洪.md",
     "神族/传说/魔与赤血.md",
+    "神族/传说/起源总纲.md",
     "神族/传说/神裔.md",
+    "神族/传说/神族秩序的温语与细则.md",
+    "神族/传说/新旧魔的分裂.md",
+    "神族/传说/死亡的宿命.md",
+    "feedback-authorial-voice.md",
+    "神族/传说/神族统治与器物之世.md",
+    "AGENTS.md",
+    "MEMORY.md",
+    "魔与赤血.md",
+    "新建 文本文档.txt",
+    "novel.md",
     "神族/主神/4. 冥神.md",
     "神族/神族之地",
     "神族/主神/2. 爱神.md",
     "神族/主神/1. 神主.md",
     "2.死亡的宿命.md",
     "神族/主神/3. 神使.md",
-    "神族/传说/死亡的宿命.md",
-    "神族/传说/神族秩序的温语与细则.md",
-    "神族/传说/神族统治与器物之世.md",
-    "神族/传说/性别的起源与变化.md",
-    "神族/传说/起源总纲.md",
     "1.性别的起源与变化.md",
     "9.%20农神.md",
     "convert_links.py",
