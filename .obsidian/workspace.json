@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fb6fb6fe5b543e17",
+        "id": "9b99fce7a19cd9cb",
         "type": "tabs",
         "children": [
           {
-            "id": "e6a3bac24868fee1",
+            "id": "1a07e1c8beabadaa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "神族/传说/神裔.md",
+                "file": "神族/主神/4. 冥神.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "神裔"
+              "title": "4. 冥神"
             }
           }
         ]
@@ -194,14 +194,23 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e6a3bac24868fee1",
+  "active": "1a07e1c8beabadaa",
   "lastOpenFiles": [
-    "神族/传说/起源总纲.md",
+    "神族/主神/2. 爱神.md",
+    "神族/主神/1. 神主.md",
+    "死亡的宿命.md",
+    "神族/主神/3. 神使.md",
+    "神族/传说/死亡的宿命.md",
     "神族/传说/神族秩序的温语与细则.md",
-    "神族/传说/魔与赤血.md",
     "神族/传说/神族统治与器物之世.md",
-    "传说",
     "神族/传说/性别的起源与变化.md",
+    "神族/传说/魔与赤血.md",
+    "神族/传说/起源总纲.md",
+    "神族/传说/神裔.md",
+    "1.性别的起源与变化.md",
+    "9.%20农神.md",
+    "convert_links.py",
+    "传说",
     "创建链接.md",
     "欢迎.md"
   ]
