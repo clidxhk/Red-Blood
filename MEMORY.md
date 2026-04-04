@@ -1,4 +1,5 @@
 - [Authorial Voice Preference](.memory/feedback-authorial-voice.md) — 创作内容保持正经作者口吻，避免幕后写作说明与出戏表述
+- [Artifact Writing Preference](.memory/feedback-artifact-writing-preference.md) — 器物条目优先写历史、特殊性、意义与代价，避免网文式神兵与纯剧情道具写法
 - [Character Format Hybrid](.memory/feedback-character-format-hybrid.md) — 人物条目采用 Markdown 主文加 JSON 底谱，并固定叙事层与结构层职责
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
