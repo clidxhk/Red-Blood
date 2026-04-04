@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "神族/主神/4. 冥神.md",
+                "file": "神族/传说/起源总纲.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4. 冥神"
+              "title": "起源总纲"
             }
           }
         ]
@@ -94,17 +94,17 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "欢迎.md",
-                "collapseAll": false,
+                "file": "神族/传说/起源总纲.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "欢迎 的反向链接列表"
+              "title": "起源总纲 的反向链接列表"
             }
           },
           {
@@ -194,8 +194,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a07e1c8beabadaa",
+  "active": "dbf804a06812cd66",
   "lastOpenFiles": [
+    "魔与赤血.md",
+    "MEMORY.md",
+    "新建 文本文档.txt",
+    "AGENTS.md",
+    "novel.md",
+    "神族/传说/魔与赤血.md",
+    "神族/传说/神裔.md",
+    "神族/主神/4. 冥神.md",
     "神族/神族之地",
     "神族/主神/2. 爱神.md",
     "神族/主神/1. 神主.md",
@@ -205,9 +213,7 @@
     "神族/传说/神族秩序的温语与细则.md",
     "神族/传说/神族统治与器物之世.md",
     "神族/传说/性别的起源与变化.md",
-    "神族/传说/魔与赤血.md",
     "神族/传说/起源总纲.md",
-    "神族/传说/神裔.md",
     "1.性别的起源与变化.md",
     "9.%20农神.md",
     "convert_links.py",
