@@ -6,3 +6,4 @@
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
+- [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
