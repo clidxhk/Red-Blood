@@ -1,1 +1,2 @@
 - [Authorial Voice Preference](.memory/feedback-authorial-voice.md) — 创作内容保持正经作者口吻，避免幕后写作说明与出戏表述
+- [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
