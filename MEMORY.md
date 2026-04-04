@@ -1,4 +1,5 @@
 - [Authorial Voice Preference](.memory/feedback-authorial-voice.md) — 创作内容保持正经作者口吻，避免幕后写作说明与出戏表述
 - [Character Format Hybrid](.memory/feedback-character-format-hybrid.md) — 人物条目采用 Markdown 主文加 JSON 底谱，并固定叙事层与结构层职责
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
+- [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
