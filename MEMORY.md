@@ -7,4 +7,18 @@
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
 - [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
+- [Toponym Naming Rigor](.memory/feedback-toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
 - [人物条目必须补json](.memory/feedback_character_entries_require_json.md) — 人物设定必须同步维护 md 正文与 json 底谱
+- [九州与神族起源差异](.memory/project-jiuzhou-origin-distinction.md) — 九州应写为内生整合后逐步异化，神族则是外来征服与直接裁序
+- [圣皇二祖分枝复合线](.memory/project-shenghuang-co-ancestors.md) — 中极皇与绵皇同部共祖，分枝交兵后以双皇并立重新合一
+- [册皇治洪与灵气调度起源](.memory/project-cehuang-flood-origin.md) — 册皇以治洪共治起家，并在征发与玄黄运转中开启九州内部的灵气集中调度
+- [社皇天命可移规则](.memory/project-shehuang-mandate-rule.md) — 社皇推翻旧部垄断并立下天命可移规则，同时以商贸官礼和灵石垄断加剧统治
+- [陵皇分封通婚秩序](.memory/project-linghuang-feudal-order.md) — 陵皇以礼法血缘和分封通婚稳住九州，使其从此难以再分
+- [师皇教育与借壳线](.memory/project-shihuang-education-line.md) — 第六圣皇以有教无类开天下教育，也长期被旧秩序借壳续命
+- [律皇皇朝中枢化](.memory/project-lvhuang-imperial-centralization.md) — 律皇重统一天下、开皇朝并把帝阙推成绝对中枢
+- [炉皇汉式帝业线](.memory/project-luhuang-han-imperium.md) — 炉皇在九州大起义后重铸帝国，以推恩、扩张与现实统治把圣皇推成成熟帝业
+- [渠皇乱后盛世秩序](.memory/project-quhuang-golden-age-order.md) — 渠皇乱后重订帝阙，削门阀立考课，并把十三州熔成首个真正盛世
+- [稷皇重文养民与边武渐弱](.memory/project-jihuang-civil-over-military.md) — 稷皇终结军阀乱世，与书院仙门共治，但因惧武祸而长期抑武
+- [宴皇外族共主与世界统一线](.memory/project-yanhuang-world-conquest-line.md) — 宴皇以外族之身征九州、伐诸域，并把世界拖入同一历史线
+- [衡皇极权冻结秩序](.memory/project-henghuang-freeze-order.md) — 衡皇自乞者起于大起义，再造帝阙并以止乱之名冻结历史生长
+- [史皇旧帝制终局线](.memory/project-shihuang-imperial-end.md) — 史皇在引狼入室后终成外族共主，败于雾锚州并终结旧帝制
