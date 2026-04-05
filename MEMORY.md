@@ -4,6 +4,7 @@
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
 - [Historical Worldbuilding Naming](.memory/feedback-historical-worldbuilding-naming.md) — 历史报告须用九州现有州名，人物名称取近似而非直用
+- [Historical Report Texture](.memory/feedback-historical-report-texture.md) — 九州史类条目优先采用撰者记、残篇与州志互证的伪史考据体
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
