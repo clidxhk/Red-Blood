@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Content 'd:\\\\Github\\\\Red-Blood\\\\势力\\\\九州\\\\圣皇\\\\7.律皇.md' -Raw\")",
+      "Bash(dir \"d:\\\\Github\\\\Red-Blood\\\\势力\\\\九州\\\\民间\\\\历史报告\")",
+      "Bash(del \"d:\\\\Github\\\\Red-Blood\\\\势力\\\\九州\\\\民间\\\\历史报告\\\\历史报告-九州第一次大起义.md\")"
+    ]
+  }
+}
