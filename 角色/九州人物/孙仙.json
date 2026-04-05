@@ -4,7 +4,7 @@
   "canonical_name": "孙仙",
   "public_titles": [
     "海隅倡议者",
-    "三民真经开卷人",
+    "参衡经开卷人",
     "先声行者"
   ],
   "narrative_role": "旧王朝崩裂前后的改世先声与过渡法统缔造者",
@@ -53,7 +53,7 @@
         "stage": "外洋游历",
         "summary": "见识议局、商盟、医院与新式器械，开始相信法度可被重新命名",
         "sensory_impression": "更亮的街灯、更整齐的长椅、更会自称公理的墙上文字",
-        "world_effect": "形成三民真经最初的制度想象"
+        "world_effect": "形成参衡经最初的制度想象"
       },
       {
         "stage": "多次起事失利",
@@ -71,7 +71,7 @@
   },
   "cultivation_profile": {
     "current_realm": "元婴中期",
-    "path": "三民真经",
+    "path": "参衡经",
     "doctrine": "试图以星辉、玄黄与人间公议共织新法统，让旧秩序在改制中退场",
     "signature_methods": [
       {
@@ -122,7 +122,7 @@
   },
   "governance_profile": {
     "faction": "改世会盟",
-    "position": "倡议首席与三民真经开卷人",
+    "position": "倡议首席与参衡经开卷人",
     "leadership_style": "先联络、先说服、先缔约，再寻求稳步推改",
     "strategic_strength": "能为杂乱阵营提供共同名义与阶段性目标",
     "strategic_blind_spot": "低估了军权、地权与外援网络会如何吞噬纸面共识"
