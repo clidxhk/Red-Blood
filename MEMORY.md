@@ -21,6 +21,7 @@
 - [Teahouse Scene Variety](.memory/feedback-teahouse-scene-variety.md) — 茶馆闲聊先复用现有小人物，新增信息同步回填人物 md，再避开重复场景并核对人物对应
 - [Teahouse Entry Reason In Scene](.memory/feedback-teahouse-entry-reason-in-scene.md) — 人物在场缘由不写进出场人物栏目，应落在茶馆情状或正文动作里
 - [Teahouse Cast Identity Only](.memory/feedback-teahouse-cast-identity-only.md) — 茶馆闲聊的出场人物栏目只写人物身份，不写视角功能或叙事职责
+- [Teahouse Labor Distinction](.memory/feedback-teahouse-labor-distinction.md) — 茶馆底层固定角色区分矿路苦工与城里碎活脚夫，避免不同苦路混成一人
 - [Teahouse Customer Presence Placement](.memory/feedback-teahouse-customer-presence-placement.md) — 茶馆客人的在场缘由按是否中途进门分别写入茶馆情状或正文
 - [Teahouse Structure Clarity](.memory/feedback-teahouse-structure-clarity.md) — 茶馆闲聊采用稳定分段，先交代背景与人物，再写馆内情状、席间议论与余意
 - [Teahouse Timeline First](.memory/feedback-teahouse-timeline-first.md) — 茶馆闲聊续写前先核对统一时间线，写完再把新节点回填进去
