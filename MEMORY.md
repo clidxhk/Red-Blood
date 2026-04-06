@@ -17,7 +17,11 @@
 - [AGENTS Content Granularity](.memory/feedback-agents-content-granularity.md) — AGENTS 约束下单篇不超过 300 行，且尽量一篇只写一个概念
 - [Preserve Content During Rewrites](.memory/feedback-preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
+- [Scene Extra Entry Exit Discipline](.memory/feedback-scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
 - [Teahouse Scene Variety](.memory/feedback-teahouse-scene-variety.md) — 茶馆闲聊先复用现有小人物，新增信息同步回填人物 md，再避开重复场景并核对人物对应
+- [Teahouse Entry Reason In Scene](.memory/feedback-teahouse-entry-reason-in-scene.md) — 人物在场缘由不写进出场人物栏目，应落在茶馆情状或正文动作里
+- [Teahouse Cast Identity Only](.memory/feedback-teahouse-cast-identity-only.md) — 茶馆闲聊的出场人物栏目只写人物身份，不写视角功能或叙事职责
+- [Teahouse Customer Presence Placement](.memory/feedback-teahouse-customer-presence-placement.md) — 茶馆客人的在场缘由按是否中途进门分别写入茶馆情状或正文
 - [Teahouse Structure Clarity](.memory/feedback-teahouse-structure-clarity.md) — 茶馆闲聊采用稳定分段，先交代背景与人物，再写馆内情状、席间议论与余意
 - [Teahouse Timeline First](.memory/feedback-teahouse-timeline-first.md) — 茶馆闲聊续写前先核对统一时间线，写完再把新节点回填进去
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
