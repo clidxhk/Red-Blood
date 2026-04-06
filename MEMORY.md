@@ -5,7 +5,7 @@
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
 - [Historical Worldbuilding Naming](.memory/feedback-historical-worldbuilding-naming.md) — 历史报告须用九州现有州名，人物名称取近似而非直用
 - [Historical Report Texture](.memory/feedback-historical-report-texture.md) — 九州史类条目优先采用撰者记、残篇与州志互证的伪史考据体
-- [Proofread Clarity And Dedup](.memory/feedback-proofread-clarity-and-dedup.md) — 成稿后必须复查通顺性、合理性、语法和重复内容
+- [Proofread Clarity And Dedup](.memory/feedback-proofread-clarity-and-dedup.md) — 清理半白话、病句与概念漂移，避免前后定义失真
 - [Preserve Content During Rewrites](.memory/feedback-preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
