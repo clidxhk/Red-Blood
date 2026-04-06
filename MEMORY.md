@@ -13,6 +13,7 @@
 - [Teahouse Scene Variety](.memory/feedback-teahouse-scene-variety.md) — 茶馆闲聊系列必须避免重复场景套路、起话口和冲突入口
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
+- [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
 - [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
 - [Toponym Naming Rigor](.memory/feedback-toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
