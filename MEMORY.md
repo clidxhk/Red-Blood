@@ -5,8 +5,10 @@
 - [Character Identity Consistency](.memory/feedback-character-identity-consistency.md) — 人物现职必须单线稳定，其余经历写成旧履历或经手事项
 - [Character Relationship Interactions](.memory/feedback-character-relationship-interactions.md) — 新增人物先补清与旧角色的关系和互动分寸，不能只立单人设定
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
+- [Crosslink Filename Exactness](.memory/feedback-crosslink-filename-exactness.md) — 全仓库交叉引用严格匹配文件名，不得擅自改字、补空格或换标点
 - [Character Entry Logic](.memory/feedback-character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
+- [No Repo Meta Wording](.memory/feedback-no-repo-meta-wording.md) — 交付文本避免“仓库里已有文档”等仓库外视角说法
 - [Institutional Worldbuilding Depth](.memory/feedback-institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
 - [Cultivation Atmosphere Preference](.memory/feedback-cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
 - [Historical Worldbuilding Naming](.memory/feedback-historical-worldbuilding-naming.md) — 历史报告须用九州现有州名，人物名称取近似而非直用
