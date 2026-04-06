@@ -3,6 +3,7 @@
 - [Avoid Catchphrase Repetition](.memory/feedback-avoid-catchphrase-repetition.md) — 压低骨脉肉与最冷最硬最怕等高频套话，避免词根和句型反复自我复制
 - [Character Format Hybrid](.memory/feedback-character-format-hybrid.md) — 人物条目采用 Markdown 主文加 JSON 底谱，并固定叙事层与结构层职责
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
+- [Character Entry Logic](.memory/feedback-character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
 - [Institutional Worldbuilding Depth](.memory/feedback-institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
 - [Cultivation Atmosphere Preference](.memory/feedback-cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
