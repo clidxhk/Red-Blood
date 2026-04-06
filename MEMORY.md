@@ -19,6 +19,7 @@
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Teahouse Scene Variety](.memory/feedback-teahouse-scene-variety.md) — 茶馆闲聊先复用现有小人物，新增信息同步回填人物 md，再避开重复场景并核对人物对应
 - [Teahouse Structure Clarity](.memory/feedback-teahouse-structure-clarity.md) — 茶馆闲聊采用稳定分段，先交代背景与人物，再写馆内情状、席间议论与余意
+- [Teahouse Timeline First](.memory/feedback-teahouse-timeline-first.md) — 茶馆闲聊续写前先核对统一时间线，写完再把新节点回填进去
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
 - [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
