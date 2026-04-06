@@ -2,6 +2,8 @@
 - [Artifact Writing Preference](.memory/feedback-artifact-writing-preference.md) — 器物条目优先写历史、特殊性、意义与代价，避免网文式神兵与纯剧情道具写法
 - [Avoid Catchphrase Repetition](.memory/feedback-avoid-catchphrase-repetition.md) — 压低骨脉肉与最冷最硬最怕等高频套话，避免词根和句型反复自我复制
 - [Character Format Hybrid](.memory/feedback-character-format-hybrid.md) — 人物条目采用 Markdown 主文加 JSON 底谱，并固定叙事层与结构层职责
+- [Character Identity Consistency](.memory/feedback-character-identity-consistency.md) — 人物现职必须单线稳定，其余经历写成旧履历或经手事项
+- [Character Relationship Interactions](.memory/feedback-character-relationship-interactions.md) — 新增人物先补清与旧角色的关系和互动分寸，不能只立单人设定
 - [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
 - [Character Entry Logic](.memory/feedback-character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
@@ -14,6 +16,7 @@
 - [Preserve Content During Rewrites](.memory/feedback-preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Teahouse Scene Variety](.memory/feedback-teahouse-scene-variety.md) — 茶馆闲聊先复用现有小人物，新增信息同步回填人物 md，再避开重复场景并核对人物对应
+- [Teahouse Structure Clarity](.memory/feedback-teahouse-structure-clarity.md) — 茶馆闲聊采用稳定分段，先交代背景与人物，再写馆内情状、席间议论与余意
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
 - [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
