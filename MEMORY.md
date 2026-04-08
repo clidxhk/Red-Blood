@@ -25,6 +25,7 @@
 - [Teahouse Customer Presence Placement](.memory/feedback-teahouse-customer-presence-placement.md) — 茶馆客人的在场缘由按是否中途进门分别写入茶馆情状或正文
 - [Teahouse Structure Clarity](.memory/feedback-teahouse-structure-clarity.md) — 茶馆闲聊采用稳定分段，先交代背景与人物，再写馆内情状、席间议论与余意
 - [Teahouse Timeline First](.memory/feedback-teahouse-timeline-first.md) — 茶馆闲聊续写前先核对统一时间线，写完再把新节点回填进去
+- [Teahouse Reference Boundary](.memory/feedback-teahouse-reference-boundary.md) — 茶馆闲聊默认不直引历史报告、东阳选集等读者向或他场景向材料，只作幕后参考
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
 - [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
