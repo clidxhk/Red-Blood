@@ -27,6 +27,7 @@
 - [Teahouse Timeline First](.memory/feedback-teahouse-timeline-first.md) — 茶馆闲聊续写前先核对统一时间线，写完再把新节点回填进去
 - [Teahouse Reference Boundary](.memory/feedback-teahouse-reference-boundary.md) — 茶馆闲聊默认不直引历史报告、东阳选集等读者向或他场景向材料，只作幕后参考
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
+- [State And Reference Split](.memory/feedback-state-reference-split.md) — 正文走官面总录，参考稿走民间流传与异闻补注，二者尽量错开信息层
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
 - [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
