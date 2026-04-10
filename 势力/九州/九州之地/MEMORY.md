@@ -1,0 +1,1 @@
+- [State And Reference Split](.memory/feedback-state-reference-split.md) — 正文走官面总录，参考稿走民间流传与异闻补注，二者尽量错开信息层
