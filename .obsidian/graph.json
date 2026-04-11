@@ -62,6 +62,20 @@
         "a": 1,
         "rgb": 16746496
       }
+    },
+    {
+      "query": "path:功法",
+      "color": {
+        "a": 1,
+        "rgb": 1835248
+      }
+    },
+    {
+      "query": "path: 法术  ",
+      "color": {
+        "a": 1,
+        "rgb": 1835248
+      }
     }
   ],
   "collapse-display": true,
@@ -74,6 +88,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.32133638605032433,
+  "scale": 0.3213363860503163,
   "close": true
 }
