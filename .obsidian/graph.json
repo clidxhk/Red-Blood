@@ -1,14 +1,71 @@
 {
   "collapse-filter": true,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "path:势力  ",
+      "color": {
+        "a": 1,
+        "rgb": 15142252
+      }
+    },
+    {
+      "query": "path:器物  ",
+      "color": {
+        "a": 1,
+        "rgb": 14069084
+      }
+    },
+    {
+      "query": "path:州郡  ",
+      "color": {
+        "a": 1,
+        "rgb": 6068182
+      }
+    },
+    {
+      "query": "tag:#人物  ",
+      "color": {
+        "a": 1,
+        "rgb": 13524182
+      }
+    },
+    {
+      "query": "tag:#大乘  ",
+      "color": {
+        "a": 1,
+        "rgb": 6084269
+      }
+    },
+    {
+      "query": "path:故事  ",
+      "color": {
+        "a": 1,
+        "rgb": 14938637
+      }
+    },
+    {
+      "query": "tag:#赤血  ",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "path:背景  ",
+      "color": {
+        "a": 1,
+        "rgb": 16746496
+      }
+    }
+  ],
   "collapse-display": true,
-  "showArrow": false,
+  "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
@@ -17,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
+  "scale": 0.32133638605032433,
   "close": true
 }
