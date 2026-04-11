@@ -24,5 +24,5 @@
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
 - [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
 - [Toponym Naming Rigor](.memory/feedback-toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
-- [人物条目必须补json](.memory/feedback_character_entries_require_json.md) — 人物设定必须同步维护 md 正文与 json 底谱
+- [人物条目必须补json](.memory/feedback_character_entries_require_json.md) — 常规人物保留 md+json，异类条目默认只写正文
 - [中文UTF-8编码](.memory/feedback-chinese-utf8-encoding.md) — 确保中文输出使用UTF-8编码避免乱码
