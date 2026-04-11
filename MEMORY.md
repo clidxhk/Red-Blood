@@ -9,11 +9,13 @@
 - [Character Entry Logic](.memory/feedback-character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
 - [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
 - [No Repo Meta Wording](.memory/feedback-no-repo-meta-wording.md) — 交付文本避免“仓库里已有文档”等仓库外视角说法
+- [No Meaning Distortion](.memory/feedback-no-meaning-distortion.md) — 重写和润色不得扭曲用户原文结论、限制条件或输入本意
 - [Institutional Worldbuilding Depth](.memory/feedback-institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
 - [Cultivation Atmosphere Preference](.memory/feedback-cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
 - [Proofread Clarity And Dedup](.memory/feedback-proofread-clarity-and-dedup.md) — 清理半白话、病句与概念漂移，避免前后定义失真
 - [AGENTS Content Granularity](.memory/feedback-agents-content-granularity.md) — AGENTS 约束下单篇不超过 300 行，且尽量一篇只写一个概念
 - [Preserve Content During Rewrites](.memory/feedback-preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
+- [Preserve Original Era Logic](.memory/feedback-preserve-original-era-logic.md) — 重写旧条目先守住原文时代阶段和制度边界，避免按惯性提前写入后世结构
 - [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
 - [Scene Extra Entry Exit Discipline](.memory/feedback-scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
