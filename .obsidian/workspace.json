@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e034d2563605598b",
+        "id": "c297366a1c255201",
         "type": "tabs",
         "children": [
           {
-            "id": "521c58cf4f8c3c67",
+            "id": "e29fa2c53690121a",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -70,7 +70,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -190,8 +191,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7653d2264bcfe098",
+  "active": "e29fa2c53690121a",
   "lastOpenFiles": [
+    "异类/异类写作说明.md",
+    "异类/神族/花妖.md",
+    "异类/九州/太始帝炎.md",
+    "异类/九州/灵火.md",
     "场景/茶馆闲聊/回青医馆.md",
     "场景/茶馆闲聊/偏街旧茶馆.md",
     "场景/茶馆闲聊/9. 茶馆闲聊·师皇.md",
@@ -215,13 +220,9 @@
     "场景/茶馆闲聊",
     "背景/回流天势.md",
     "背景/众生网.md",
-    "角色/九州人物/茶馆小人物/陆照麟.md",
     "角色/九州人物/茶馆小人物/陆照麟.json",
-    "角色/九州人物/茶馆小人物/邢五.md",
-    "角色/九州人物/茶馆小人物/迅哥.md",
     "角色/九州人物/茶馆小人物/邢五.json",
     "角色/九州人物/茶馆小人物/迅哥.json",
-    "角色/九州人物/茶馆小人物/老舒.md",
     "角色/九州人物/茶馆小人物/老舒.json",
     "角色/九州人物/茶馆小人物/沈相公.json",
     "角色/九州人物/茶馆小人物/柳青蘅.json",
