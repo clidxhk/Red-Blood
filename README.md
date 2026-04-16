@@ -1,5 +1,7 @@
 # 赤血（Red Blood） 🔥
 
+**License:** Creative content is licensed under [CC BY-NC-SA 4.0](./LICENSE-CONTENT); code and tooling are licensed under [MIT](./LICENSE-CODE).
+
 > 一个把仙侠世界观写成可协作知识网络的尝试。  
 > 用 黑曜石（Obsidian） 串联设定，用 Git 保留演化脉络，用协作智能体辅助检索、补缀、扩写与回填。  
 > 一起把一座能生长、能回链、能接力的仙侠世界慢慢写出来。 ✨
