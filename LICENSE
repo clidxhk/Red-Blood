@@ -1,0 +1,43 @@
+Red Blood uses a split-license model.
+
+Scope
+
+1. Creative content
+
+Unless a file or directory states otherwise, the repository's creative content is
+licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International license.
+
+This includes, for example:
+
+- Markdown worldbuilding and story files
+- Character sheets and other lore documents
+- JSON character data and setting data created as part of the fiction project
+- Image and illustrative assets created for the setting
+
+See [LICENSE-CONTENT](./LICENSE-CONTENT).
+
+2. Code and tooling
+
+Code, scripts, automation, and tooling files are licensed under the MIT License,
+unless a file or directory states otherwise.
+
+This includes, for example:
+
+- Utility scripts
+- Local automation
+- Tooling and integration code
+- Configuration examples that are software-oriented in nature
+
+See [LICENSE-CODE](./LICENSE-CODE).
+
+3. Precedence
+
+If a file or subdirectory contains a more specific license notice, that notice
+controls for that scope.
+
+4. Attribution and contact
+
+If you want to request commercial use of the creative content, or if your
+intended use is unclear under this split-license model, obtain explicit
+permission from the repository owner before proceeding.
