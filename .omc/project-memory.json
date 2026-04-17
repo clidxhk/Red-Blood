@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776430813802,
+  "projectRoot": "d:\\Github\\Red-Blood",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "功法": {
+      "path": "功法",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813761,
+      "keyFiles": [
+        "功法格式说明.md"
+      ]
+    },
+    "势力": {
+      "path": "势力",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776430813762,
+      "keyFiles": []
+    },
+    "历史": {
+      "path": "历史",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776430813764,
+      "keyFiles": [
+        "十二州内战.md",
+        "炉林魔乱.md"
+      ]
+    },
+    "器物": {
+      "path": "器物",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813765,
+      "keyFiles": [
+        "器物写作说明.md"
+      ]
+    },
+    "州郡": {
+      "path": "州郡",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776430813766,
+      "keyFiles": []
+    },
+    "巨头": {
+      "path": "巨头",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776430813767,
+      "keyFiles": []
+    },
+    "异类": {
+      "path": "异类",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813767,
+      "keyFiles": [
+        "异类写作说明.md"
+      ]
+    },
+    "故事": {
+      "path": "故事",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813768,
+      "keyFiles": [
+        "collective_heroism.md"
+      ]
+    },
+    "族群": {
+      "path": "族群",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776430813769,
+      "keyFiles": []
+    },
+    "法术": {
+      "path": "法术",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1776430813770,
+      "keyFiles": []
+    },
+    "禁地": {
+      "path": "禁地",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813771,
+      "keyFiles": [
+        "禁地写作说明.md"
+      ]
+    },
+    "经济": {
+      "path": "经济",
+      "purpose": null,
+      "fileCount": 9,
+      "lastAccessed": 1776430813771,
+      "keyFiles": [
+        "丹药价格.md",
+        "功法价格.md",
+        "器物价格.md",
+        "寒门散修从凡人到筑基.md",
+        "灵兽价格.md"
+      ]
+    },
+    "背景": {
+      "path": "背景",
+      "purpose": null,
+      "fileCount": 6,
+      "lastAccessed": 1776430813772,
+      "keyFiles": [
+        "世界背景.md",
+        "众生网.md",
+        "修士境界.md",
+        "回流天势.md",
+        "州城法网.md"
+      ]
+    },
+    "角色": {
+      "path": "角色",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1776430813773,
+      "keyFiles": [
+        "人物格式说明.md"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}
