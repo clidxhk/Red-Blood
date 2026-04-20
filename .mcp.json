@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "sequentialthinking": {
+      "type": "sse",
+      "url": "https://mcp-52ab0a17-bec6-43a5.api-inference.modelscope.net/sse"
+    },
+    "bing-cn-mcp-server": {
+      "type": "sse",
+      "url": "https://mcp.api-inference.modelscope.net/b09cf6a6f6a145/sse"
+    },
+    "fetch": {
+      "type": "sse",
+      "url": "https://mcp.api-inference.modelscope.net/a19959621dcc4e/sse"
+    }
+  }
+}
