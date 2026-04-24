@@ -21,6 +21,7 @@
 - [Scene Extra Entry Exit Discipline](.memory/feedback-scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
 - [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
+- [Image Script Workflow](.memory/feedback-image-script-workflow.md) — 生成各类图片时统一复用脚本、审图、改名并按版式插回正文的流程
 - [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
 - [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
 - [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
