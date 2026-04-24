@@ -4,14 +4,13 @@ Generate images from a Markdown file plus extra requirements using the OpenAI SD
 
 Examples:
   python scripts/generate_image_from_md.py scene.md --extra "Ancient xianxia style, cinematic lighting"
-  python scripts/generate_image_from_md.py scene.md --extra-file notes.txt --model gpt-image-2-all --n 2
+  python scripts/generate_image_from_md.py scene.md --extra-file notes.txt --n 2
 """
 
 from __future__ import annotations
 
 import argparse
 import base64
-import os
 import sys
 import textwrap
 import urllib.request
@@ -22,6 +21,10 @@ try:
 except ImportError as exc:
     print("Missing dependency: openai. Install it with: pip install openai", file=sys.stderr)
     raise SystemExit(1) from exc
+
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_ENV_FILE = SCRIPT_DIR / ".env"
 
 
 def parse_args() -> argparse.Namespace:
@@ -38,27 +41,6 @@ def parse_args() -> argparse.Namespace:
         "--extra-file",
         type=Path,
         help="Optional text file containing additional image requirements.",
-    )
-    parser.add_argument(
-        "--model",
-        default="gpt-image-2-all",
-        help="Image model name. Defaults to gpt-image-2-all as requested.",
-    )
-    parser.add_argument(
-        "--api-key",
-        default="",
-        help="API key. Overrides OPENAI_API_KEY when provided.",
-    )
-    parser.add_argument(
-        "--base-url",
-        default="",
-        help="Custom API base URL. Overrides OPENAI_BASE_URL when provided.",
-    )
-    parser.add_argument(
-        "--env-file",
-        type=Path,
-        default=Path(".env"),
-        help="Optional .env file path. Used when CLI args and process env vars are absent.",
     )
     parser.add_argument(
         "--size",
@@ -96,6 +78,13 @@ def read_text(path: Path) -> str:
         return path.read_text(encoding="utf-8")
     except UnicodeDecodeError:
         return path.read_text(encoding="utf-8-sig")
+
+
+def configure_stdio() -> None:
+    for stream_name in ("stdout", "stderr"):
+        stream = getattr(sys, stream_name, None)
+        if stream is not None and hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
 
 
 def truncate_markdown(markdown: str, limit: int) -> tuple[str, bool]:
@@ -159,28 +148,22 @@ def save_image_from_url(url: str, path: Path) -> None:
 
 
 def main() -> int:
+    configure_stdio()
     args = parse_args()
 
-    dotenv_values = parse_dotenv(args.env_file)
-
-    api_key = (
-        args.api_key.strip()
-        or os.environ.get("OPENAI_API_KEY", "").strip()
-        or os.environ.get("API_KEY", "").strip()
-        or dotenv_values.get("OPENAI_API_KEY", "").strip()
-        or dotenv_values.get("API_KEY", "").strip()
-    )
-    base_url = (
-        args.base_url.strip()
-        or os.environ.get("OPENAI_BASE_URL", "").strip()
-        or os.environ.get("BASE_URL", "").strip()
-        or dotenv_values.get("OPENAI_BASE_URL", "").strip()
-        or dotenv_values.get("BASE_URL", "").strip()
+    dotenv_values = parse_dotenv(DEFAULT_ENV_FILE)
+    api_key = dotenv_values.get("OPENAI_API_KEY", "").strip() or dotenv_values.get("API_KEY", "").strip()
+    base_url = dotenv_values.get("OPENAI_BASE_URL", "").strip() or dotenv_values.get("BASE_URL", "").strip()
+    model = (
+        dotenv_values.get("OPENAI_IMAGE_MODEL", "").strip()
+        or dotenv_values.get("IMAGE_MODEL", "").strip()
+        or dotenv_values.get("MODEL", "").strip()
+        or "gpt-image-2-all"
     )
 
     if not api_key:
         print(
-            "API key is not set. Provide --api-key, OPENAI_API_KEY/API_KEY, or put it in the .env file.",
+            f"API key is not set in {DEFAULT_ENV_FILE}.",
             file=sys.stderr,
         )
         return 1
@@ -209,7 +192,7 @@ def main() -> int:
 
     client = OpenAI(**client_kwargs)
     response = client.images.generate(
-        model=args.model,
+        model=model,
         prompt=prompt,
         size=args.size,
         quality=args.quality,
