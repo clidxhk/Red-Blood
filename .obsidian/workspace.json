@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "d836da616f644583",
+        "id": "6bf694130c10e4d2",
         "type": "tabs",
         "children": [
           {
-            "id": "6562a79729e15234",
+            "id": "e86e812aab05a1ec",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "icon": "lucide-file",
+              "title": "新标签页"
             }
           }
         ]
@@ -70,7 +70,8 @@
               "title": "书签"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -190,8 +191,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "dbf804a06812cd66",
+  "active": "e86e812aab05a1ec",
   "lastOpenFiles": [
+    "功法/赤血/先锋.md",
     "禁地/神族/棋局原.md",
     "法术/九州/九州基础五行法术.md",
     "法术/九州/九州基础五行法术",
@@ -219,7 +221,6 @@
     "异类/神族/半狼·裂冬.md",
     "异类/神族/绯爵·净血侯.md",
     "异类/神族/穗禁·藏秋母.md",
-    "异类/九州/九幽辰火.md",
     "族群/神族",
     "族群/九州",
     "族群",
