@@ -1,6 +1,10 @@
 {
   "permissions": {
-    "allow": [
-    ]
-  }
+    "allow": []
+  },
+  "enabledMcpjsonServers": [
+    "sequentialthinking",
+    "bing-cn-mcp-server",
+    "fetch"
+  ]
 }
