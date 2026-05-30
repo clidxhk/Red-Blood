@@ -1,3 +1,5 @@
 - [Historical Worldbuilding Naming](.memory/feedback-historical-worldbuilding-naming.md) — 历史报告须用九州现有州名，人物名称取近似而非直用
 - [Historical Report Texture](.memory/feedback-historical-report-texture.md) — 九州史类条目优先采用撰者记、残篇与州志互证的伪史考据体
 - [历史报告-烈皇西征考](历史报告-烈皇西征考.md) — 烈皇西征全程考证：三道出师、兀阑城之战、西域征服、雪山教团、神族边界与西帐遗产
+- [历史报告-衡皇远航考](历史报告-衡皇远航考.md) — 衡皇官船远航考证：数下南洋、封贡锁海、船队制度、远西之行与片板不许下海
+- [历史报告-东来黑死考](历史报告-东来黑死考.md) — 烈皇西征兵锋下神族大地爆发的大瘟疫：异域灵病、诸神束手、爱神破序与瘟后的体制裂缝
