@@ -1,2 +1,3 @@
 - [Historical Worldbuilding Naming](.memory/feedback-historical-worldbuilding-naming.md) — 历史报告须用九州现有州名，人物名称取近似而非直用
 - [Historical Report Texture](.memory/feedback-historical-report-texture.md) — 九州史类条目优先采用撰者记、残篇与州志互证的伪史考据体
+- [历史报告-烈皇西征考](历史报告-烈皇西征考.md) — 烈皇西征全程考证：三道出师、兀阑城之战、西域征服、雪山教团、神族边界与西帐遗产
