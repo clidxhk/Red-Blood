@@ -1,6 +1,11 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(Get-ChildItem \"d:\\\\Github\\\\Red-Blood\\\\故事\\\\东阳选集\")",
+      "Bash(Select-Object Name)",
+      "Bash(git -C \"d:\\\\Github\\\\Red-Blood\" log --oneline -20)",
+      "Bash(git -C \"d:/Github/Red-Blood\" log --oneline --since=\"2026-04-21\")"
+    ]
   },
   "enabledMcpjsonServers": [
     "sequentialthinking",

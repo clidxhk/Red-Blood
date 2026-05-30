@@ -11,10 +11,10 @@
             "id": "e86e812aab05a1ec",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -70,8 +70,7 @@
               "title": "书签"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -193,6 +192,9 @@
   },
   "active": "e86e812aab05a1ec",
   "lastOpenFiles": [
+    "历史/烈皇西征.md",
+    "历史/衡皇远航.md",
+    "历史/东来黑死.md",
     "功法/赤血/先锋.md",
     "禁地/神族/棋局原.md",
     "法术/九州/九州基础五行法术.md",
@@ -218,9 +220,6 @@
     "异类/神族/半花·花伶.md",
     "族群/神族/绯裔.md",
     "族群/神族/狼人.md",
-    "异类/神族/半狼·裂冬.md",
-    "异类/神族/绯爵·净血侯.md",
-    "异类/神族/穗禁·藏秋母.md",
     "族群/神族",
     "族群/九州",
     "族群",
