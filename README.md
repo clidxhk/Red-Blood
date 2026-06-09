@@ -44,12 +44,21 @@ Git 在这里承担的是集体记忆骨架。
 
 ### 协作智能体
 
-这个项目把 AI 放在检索、对齐、补缀、扩写的位置，而不是让它脱离设定直接代写。
+这个项目把 AI 放在检索、对齐、补缀、扩写的位置，而不是让它脱离设定直接代写。协作不再依赖单个智能体"读完所有设定再写"，而是由一个总导演调度八个专项 subagent，按四阶段管线协作推进。
 
-- [`AGENTS.md`](./AGENTS.md) 约束了检索顺序、交叉引用规范、人物双文件规则与文风边界。
+- [`AGENTS.md`](./AGENTS.md) 定义了一个八人 subagent 团队：`research-agent`（检索调研）、`teahouse-chronicler`（茶馆专属约束）、`character-actor`（人物互动预演）、`style-writer`（正文撰写引擎）、`tone-checker`（文风语气审校）、`crosslink-checker`（交叉引用审校）、`character-reviewer`（人物七维审查）、`worldbuilding-consistency`（跨文件八维一致性审查）。
 - [`MEMORY.md`](./MEMORY.md) 索引了长期有效的协作记忆，帮助后续轮次更快接住上下文。
 
-这样做不是为了省掉创作判断，而是让多人协作和多轮 AI 协作走同一套轨道。
+这样做不是为了省掉创作判断，而是让多人协作和多轮 AI 协作走同一套轨道——每一条创作任务都经过检索→撰写→审校→交付四个强制阶段，每个阶段有明确的负责 subagent 和产出物。
+
+### 多 Subagent 协同机制
+
+`AGENTS.md` 的核心设计是"总导演 + 专项 team"。主架构师负责判断任务类型、调度 subagent、审核产出、处理审校意见后交付；八个 subagent 各自专精一个管线阶段，不跨越阶段、不越权撰写。
+
+- **管线不可跳过**：阶段一（`research-agent` 检索调研）未完成，不得进入阶段二（`style-writer` 正文撰写）；阶段三（多维审校）未全部通过，不得进入阶段四（交付）。
+- **按任务类型路由**：新建条目走 `research-agent → character-actor → style-writer → tone-checker → crosslink-checker → character-reviewer` 六环链路；茶馆回目额外插入 `teahouse-chronicler`；批量统稿追加 `worldbuilding-consistency`。
+- **审校不修改正文**：阶段三的四个审校 subagent 只出报告，修正由主架构师亲自执行，确保修改可追溯、不引入新噪音。
+- **并行与依赖**：`tone-checker` 和 `crosslink-checker` 可并行调用，`character-reviewer` 和 `worldbuilding-consistency` 可并行调用，但两组间有依赖顺序——前一组可能产生需要后一组重新检查的修正。
 
 ---
 
@@ -128,7 +137,7 @@ Git 在这里承担的是集体记忆骨架。
 - **器物与功法**：九州法器与神族器物双线推进，赤血专属内功、星辉三诀与五行法术体系持续补全
 - **禁地**：九州 8 处 + 神族 5 处禁地均已设立并配图
 - **故事线**：茶馆闲聊（29 篇灯下短论 + 3 个场景 + 多组小人物）、东阳选集（9 篇论说）、历史报告（10 篇考据）、生存小册子（8 篇民间视角指南）
-- **协作层**：`AGENTS.md` 主规则 + 4 个 Codex 子代理配置（character-reviewer、crosslink-checker、teahouse-chronicler、tone-checker）
+- **协作层**：`AGENTS.md` 主规则 + 8 个 Codex 子代理配置（research-agent、teahouse-chronicler、character-actor、style-writer、tone-checker、crosslink-checker、character-reviewer、worldbuilding-consistency），按四阶段管线协作
 
 当前仓库最可贵的地方，不是条目已经很多，而是不同层级的内容开始真正互相咬合。历史不再只是圣皇年表，故事不再只是茶馆一盏灯下——器物、州郡、功法、异类、经济与民间视角正在合成一套可以多方进入、反复书写的世界网络。
 
