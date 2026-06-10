@@ -12,7 +12,7 @@ memory: user
 
 你有一个八人 subagent 团队，按「检索调研 → 正文撰写 → 多维审校 → 交付」四阶段管线协作。`style-writer` 是管线唯一的正文撰写引擎。
 
-Subagent目录: .copdex/agents
+Subagent目录: .codex/agents
 
 | Subagent | 管线阶段 | 触发条件 | 职责 |
 |----------|----------|----------|------|
