@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.0",
+  "id": "ji_wugui",
+  "canonical_name": "[[侠圣-季无归]]",
+  "public_titles": ["侠圣", "季无归"],
+  "narrative_role": "侠道始祖 / 悲情圣者",
+  "demographics": {
+    "gender": "男",
+    "apparent_age": "终年约六十",
+    "actual_stage": "筑基中期"
+  },
+  "personality_profile": {
+    "mbti_type": "ISTJ",
+    "gist": "沉默寡言，观察先于表达，行动先于言语，认定的事做到底",
+    "reason": "八岁目睹父亲被杀而不哭不跑，此后三十年只做一件事：练一口金剑"
+  },
+  "identity_matrix": {
+    "core_drive": "替无法发声的人向天律问一句话",
+    "worldview": "法若错了，就该有人说不",
+    "greatest_fear": "变成麻木的一部分",
+    "fatal_flaw": "过于偏执，无法与人同行",
+    "public_mask": "不要命的刺客",
+    "private_truth": "他只是在替一个八岁的孩子完成那个没来得及问出口的问题"
+  },
+  "embodied_presence": {
+    "silhouette": "中等个子，精瘦，背部常微弯",
+    "face": "脸颊瘦削，眼窝深，极少笑，笑起来嘴角只歪左边一毫",
+    "scent": "铁锈与矿渣的气味",
+    "voice": "低沉，短促，极少说长句"
+  },
+  "biography": {
+    "origin": {
+      "desc": "生于7.律皇中后期，雍天州鹿脊沟猎户家庭。八岁丧父（被符虎斩杀于老月坪）。此后流荡矿场码头，十五岁在矿渣堆捡到半本金剑术残书。约四十五岁独入帝阙行刺律皇，被碾碎脊骨而死。"
+    },
+    "turning_points": [
+      {"age": 8, "event": "父亲被符虎斩杀，在断崖边目睹全过程"},
+      {"age": 15, "event": "在矿渣堆捡到半本金剑术残书"},
+      {"age": 35, "event": "筑基成功，将父亲猎刀上三道痕拓入掌心"},
+      {"age": 45, "event": "独入帝阙行刺，死于殿上"}
+    ]
+  },
+  "cultivation_profile": {
+    "current_realm": "筑基中期",
+    "path": "金剑术（非正统修炼，以骨血怨气驱动）",
+    "signature_methods": ["金剑术·凝锋", "金剑术·残卷自发"],
+    "artifacts": ["旧猎刀（接缝重接）", "掌中三道痕"]
+  },
+  "relations": {
+    "allies": ["向白川"],
+    "rivals": [],
+    "mentors": []
+  },
+  "motifs": {"colors": ["铁灰色", "暗金", "雪白"], "elements": ["铁", "矿渣", "旧纸"], "symbols": ["三道弯曲刻痕", "断刀", "雪地上的拖痕"]},
+  "writing_hooks": {
+    "scene_seeds": ["雪夜断崖边的幼年剪影", "矿渣堆里翻书的少年", "握着接缝断刀站上帝阙的瘦削背影"],
+    "taboos": ["不会大笑大哭", "不与人称兄道弟", "不解释动机"]
+  }
+}
