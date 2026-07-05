@@ -28,3 +28,6 @@
 - [Toponym Naming Rigor](.memory/feedback-toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
 - [人物条目必须补json](.memory/feedback_character_entries_require_json.md) — 常规人物保留 md+json，异类条目默认只写正文
 - [中文UTF-8编码](.memory/feedback-chinese-utf8-encoding.md) — 确保中文输出使用UTF-8编码避免乱码
+- [炽（炎皇）宿命身份设定](.memory/project-chi-origin-lore.md) — 炽天生圣脉但丹田碎裂、代表天地回流、被律皇跨越时空扼杀的设定
+- [写作计划自动执行原则](.memory/feedback-writing-auto-execution.md) — 面对小说正文撰写等任务，智能体可自动决策直接执行，无需每次申请审批
+
