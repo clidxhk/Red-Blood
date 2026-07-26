@@ -30,4 +30,4 @@
 - [中文UTF-8编码](.memory/feedback-chinese-utf8-encoding.md) — 确保中文输出使用UTF-8编码避免乱码
 - [炽（炎皇）宿命身份设定](.memory/project-chi-origin-lore.md) — 炽天生圣脉但丹田碎裂、应九州共业临熟之缘而生、被律皇跨越时空扼杀的设定
 - [写作计划自动执行原则](.memory/feedback-writing-auto-execution.md) — 面对小说正文撰写等任务，智能体可自动决策直接执行，无需每次申请审批
-
+- [典籍与神话原型优先](.memory/feedback-reference-archetypes.md) — 核心概念先查佛道典籍、经典文献与世界神话原型，再转译进世界观
