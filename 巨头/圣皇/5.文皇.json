@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0",
+  "id": "wenhuang_5",
+  "canonical_name": "[[5.文皇]]",
+  "public_titles": ["礼皇", "分封祖", "西陲[[5.文皇]]"],
+  "narrative_role": "第五圣皇 / 分封与责任法统奠基者",
+  "demographics": {"gender": "男", "apparent_age": 42, "actual_stage": "大乘（祖礼法统）"},
+  "personality_profile": {"gist": "温和、审慎、重责，擅长把胜势转成可长久运行的秩序", "reason": "边地小部出身，以宗族礼序与共同守陵的经验稳住九州", "fatal_flaw": "过度相信嫡长、宗法与责任网能自行约束后世高位者"},
+  "identity_matrix": {"core_drive": "让高位者以责任与义务自限，使九州在统一后不再立刻崩散", "worldview": "天下一体不能只靠中央威压维持，必须有分封、婚盟、祖法与相互承责的长网", "greatest_fear": "礼法长网被后世改造成只剩名分与索取的压迫网"},
+  "biography": {"origin": {"desc": "出自[[雍天州]]边陲小部，在风雪与祖陵守护中长大"}, "turning_points": [{"age": 30, "event": "率三千人起兵，推翻[[4.社皇]]末王玄祀王，接过失德旧王留下的天下法统"}, {"age": 40, "event": "定下嫡长、分封、婚盟、封土责任与祖庙共认之制，使九州第一次成为同序之地"}, {"age": 70, "event": "[[5.文皇]]礼网运行至深处，凝出[[火凤]]这一道礼制灵性"}]},
+  "cultivation_profile": {"current_realm": "大乘", "path": "祖礼法统", "signature_methods": ["祖庙定名", "分封责任网", "礼网镇脉"], "limits": ["礼法必须得到各部承认才能持续", "分封与嫡长可稳住天下，也可能在后世固化等级"]},
+  "relations": {"predecessors": ["[[4.社皇]]"], "successors": ["[[6.师皇]]"], "allies": ["[[火凤]]", "[[雍天州]]边部"], "rivals": ["[[4.社皇]]末王玄祀王"]},
+  "motifs": {"colors": ["黛青", "古铜", "祖火赤金"], "elements": ["祖陵", "封土", "礼册", "风雪边部"]},
+  "writing_hooks": {"taboos": ["不得把[[5.文皇]]写成纯粹仁君", "不得抹去礼法对后世等级与责任的双重作用"]}
+}
