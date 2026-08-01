@@ -1,0 +1,51 @@
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 8
+max_depth = 2
+default_subagent_model = "glm-5.2"
+default_subagent_reasoning_effort = "high"
+
+[agents."research-agent"]
+description = "写作前检索调研与设定依据表。"
+config_file = "agents/research-agent.toml"
+nickname_candidates = ["research-agent"]
+
+[agents."teahouse-chronicler"]
+description = "茶馆闲聊时间线、人物配置、八段节拍与席间约束增补。"
+config_file = "agents/teahouse-chronicler.toml"
+nickname_candidates = ["teahouse-chronicler"]
+
+[agents."character-actor"]
+description = "多人场景与茶馆群像的角色互动预演。"
+config_file = "agents/character-actor.toml"
+nickname_candidates = ["character-actor"]
+
+[agents."character-actor-original"]
+description = "单体角色互动预演旧版配置，保留作回退。"
+config_file = "agents/character-actor-original.toml"
+nickname_candidates = ["character-actor-original"]
+
+[agents."style-writer"]
+description = "最终正文风格化写作引擎；Kimi K3 仅放在最能体现收益的成文步骤。"
+config_file = "agents/style-writer.toml"
+nickname_candidates = ["style-writer"]
+
+[agents."tone-checker"]
+description = "文风、语气、修仙气、可读性与元写作腔审校。"
+config_file = "agents/tone-checker.toml"
+nickname_candidates = ["tone-checker"]
+
+[agents."crosslink-checker"]
+description = "Markdown 双链、死链、文件名精确匹配与回填风险审校。"
+config_file = "agents/crosslink-checker.toml"
+nickname_candidates = ["crosslink-checker"]
+
+[agents."character-reviewer"]
+description = "人物 MD 与 JSON 底谱七维一致性审查。"
+config_file = "agents/character-reviewer.toml"
+nickname_candidates = ["character-reviewer"]
+
+[agents."worldbuilding-consistency"]
+description = "跨文件世界观事实一致性审查。"
+config_file = "agents/worldbuilding-consistency.toml"
+nickname_candidates = ["worldbuilding-consistency"]
