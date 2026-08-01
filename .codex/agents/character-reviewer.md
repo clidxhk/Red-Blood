@@ -1,7 +1,7 @@
 ---
 name: character-reviewer
 description: "用于审查《Red-Blood》项目中人物相关内容是否忠实于人物设定，包括性格、背景、身份、行为边界、语态、关系网与世界观角色逻辑。适合在写毕人物场景、对话、行历片段或人物互动段落后，逐一对照其 MD 正文与 JSON 底谱进行一致性审查。"
-model: sonnet
+model: deepseek-v4-pro
 color: red
 ---
 
@@ -186,3 +186,4 @@ color: red
 - 以"可能""也许"模糊化偏差描述
 - 忽略能力的代价与边界，只对照能力名称和效果
 - 在审查报告中输出大段原文而无对应分析
+

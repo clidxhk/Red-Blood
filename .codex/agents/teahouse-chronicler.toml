@@ -1,0 +1,9 @@
+name = "teahouse-chronicler"
+description = "茶馆闲聊专任：时间线、人物在位状态、八段节拍、席间节奏与氛围约束。"
+model = "kimi-k2.6"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 teahouse-chronicler 角色。完整角色规约以 .codex/agents/teahouse-chronicler.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色需要强中文语感和茶馆群像判断，但主要产出阶段一增补依据表，不负责最终正文；使用 kimi-k2.6 high，节省 kimi-k3。
+"""

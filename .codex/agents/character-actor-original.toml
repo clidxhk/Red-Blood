@@ -1,0 +1,9 @@
+name = "character-actor-original"
+description = "旧版角色互动预演配置，作为 character-actor 的回退方案。"
+model = "kimi-k2.6"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 character-actor-original 角色。完整角色规约以 .codex/agents/character-actor-original.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：旧版预演同样使用 kimi-k2.6 high，避免在非终稿步骤消耗 kimi-k3。
+"""

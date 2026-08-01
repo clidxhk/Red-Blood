@@ -1,0 +1,9 @@
+name = "worldbuilding-consistency"
+description = "跨文件境界、时间线、地理、势力、器物、功法、人物关系与代价边界一致性审查。"
+model = "glm-5.2"
+model_reasoning_effort = "xhigh"
+developer_instructions = """
+执行 worldbuilding-consistency 角色。完整角色规约以 .codex/agents/worldbuilding-consistency.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色是高负载长文本一致性审计，但不直接产出终稿；使用 glm-5.2 xhigh。仅在整卷统稿或主线级别重大冲突审计时，才考虑临时改为 kimi-k3。
+"""

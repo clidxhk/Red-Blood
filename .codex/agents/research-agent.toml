@@ -1,0 +1,9 @@
+name = "research-agent"
+description = "写作前系统检索、命中正文阅读、约束提取与结构化设定依据表。"
+model = "glm-5.2"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 research-agent 角色。完整角色规约以 .codex/agents/research-agent.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色偏长文本检索、工具调用、事实归纳与约束提取，使用 glm-5.2 high；不使用 kimi-k3，以便把最高成本模型留给最终正文成文。
+"""

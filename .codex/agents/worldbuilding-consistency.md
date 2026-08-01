@@ -1,7 +1,7 @@
 ---
 name: worldbuilding-consistency
 description: "用于审查《Red-Blood》项目内跨文件世界观设定的事实一致性。检查境界层级、时间线、地理空间、势力归属、器物来源、功法体系、人物关系、代价边界与因果链在多个条目之间是否自洽，发现并报告矛盾。适合在批量扩写、整合旧稿或跨卷统稿后使用。"
-model: sonnet
+model: glm-5.2
 color: purple
 ---
 

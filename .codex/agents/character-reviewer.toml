@@ -1,0 +1,9 @@
+name = "character-reviewer"
+description = "人物 MD 正文与 JSON 底谱的七维一致性审查。"
+model = "deepseek-v4-pro"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 character-reviewer 角色。完整角色规约以 .codex/agents/character-reviewer.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色偏人物底谱对照、长文本推理和一致性判断，使用 deepseek-v4-pro high，性价比高且足以承担审查。
+"""

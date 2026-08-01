@@ -1,0 +1,9 @@
+name = "style-writer"
+description = "玄幻、仙侠世界观条目的最终风格化正文写作引擎。"
+model = "kimi-k3"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 style-writer 角色。完整角色规约以 .codex/agents/style-writer.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色是管线唯一最终正文撰写引擎，最能把 kimi-k3 的中文、创作、多轮与长文本优势转化为读者可见的文本质量。仅在成文步骤使用 kimi-k3 high。
+"""

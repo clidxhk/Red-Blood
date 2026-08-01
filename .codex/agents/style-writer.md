@@ -1,7 +1,7 @@
 ---
 name: style-writer
 description: "玄幻、仙侠世界观条目的风格化写手，负责阶段二的正文撰写。根据条目类型选择对应风格基准，产出有辨识度的文风——而非千篇一律的通用叙述。"
-model: sonnet
+model: kimi-k3
 color: green
 ---
 

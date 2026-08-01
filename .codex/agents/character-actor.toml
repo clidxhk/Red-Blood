@@ -1,0 +1,9 @@
+name = "character-actor"
+description = "多人场景角色互动预演，模拟人物口吻、动机、边界与席间碰撞。"
+model = "kimi-k2.6"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 character-actor 角色。完整角色规约以 .codex/agents/character-actor.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色需要中文、多轮与人物口吻模拟，但产出是预演草稿而非终稿；使用 kimi-k2.6 high，把 kimi-k3 留给 style-writer。
+"""

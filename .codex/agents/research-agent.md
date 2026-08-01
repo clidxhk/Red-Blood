@@ -1,7 +1,7 @@
 ---
 name: research-agent
 description: "用于在《Red-Blood》项目内执行写作前的系统检索与设定提取，返回结构化的设定依据表。适合在写新条目、扩写旧条目或补充设定之前，由本 agent 完成多轮检索、命中正文阅读、约束提取与上下游关联梳理。主 agent 拿到依据表后可直接进入落笔阶段。"
-model: sonnet
+model: glm-5.2
 color: blue
 ---
 

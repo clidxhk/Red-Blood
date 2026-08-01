@@ -1,0 +1,9 @@
+name = "tone-checker"
+description = "文风、语气、修仙气、可读性、元写作腔与概念一致性审校。"
+model = "qwen3.7-max"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 tone-checker 角色。完整角色规约以 .codex/agents/tone-checker.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色需要文学语感、中文判断和指令遵循，但不产出终稿；使用 qwen3.7-max high，保留高阶审校质量同时节省 kimi-k3。
+"""

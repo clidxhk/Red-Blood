@@ -1,0 +1,9 @@
+name = "crosslink-checker"
+description = "交叉引用、死链、文件名精确匹配、上下游关系与回填风险审校。"
+model = "glm-5.2"
+model_reasoning_effort = "high"
+developer_instructions = """
+执行 crosslink-checker 角色。完整角色规约以 .codex/agents/crosslink-checker.md 为准；开始任务前先读取并遵守该 Markdown 指令稿。
+
+模型分配原则：本角色偏工具调用、规则审计与事实匹配，使用 glm-5.2 high；不使用 kimi-k3。
+"""
