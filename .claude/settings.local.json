@@ -6,7 +6,8 @@
       "Bash(git -C \"d:\\\\Github\\\\Red-Blood\" log --oneline -20)",
       "Bash(git -C \"d:/Github/Red-Blood\" log --oneline --since=\"2026-04-21\")",
       "Bash(git mv *)",
-      "PowerShell(\\(Get-Content \"d:\\\\Github\\\\Red-Blood\\\\圣者\\\\圣人\\\\画圣-卫丹青.md\" | Measure-Object -Line\\).Lines)"
+      "PowerShell(\\(Get-Content \"d:\\\\Github\\\\Red-Blood\\\\圣者\\\\圣人\\\\画圣-卫丹青.md\" | Measure-Object -Line\\).Lines)",
+      "Bash(wc -l \"d:\\\\\\\\Github\\\\\\\\Red-Blood\\\\\\\\故事\\\\\\\\炎帝崛起\\\\\\\\章回\"/*.md)"
     ]
   },
   "enabledMcpjsonServers": [
