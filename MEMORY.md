@@ -33,5 +33,6 @@
 - [典籍与神话原型优先](.memory/feedback-reference-archetypes.md) — 核心概念先查佛道典籍、经典文献与世界神话原型，再转译进世界观
 - [每轮修改必须git提交](.memory/feedback-git-commit-after-revision.md) — 每轮修改完成后立即 git add + commit 落库并汇报提交哈希，不能只停在暂存
 - [形意与业的架构](.memory/project-xingyi-ye-architecture.md) — 形意实时对流为体，业为失当积累越过阈值后的大规模回流，非延后清算
+- [神族起源叙事遗留校准清单](.memory/project-god-origin-reconciliation-debt.md) — 九神「史书副座／残卷奴隶」双层口径与主神条目侧待统稿异说（1.神主漏倒生林等）
 - [并行编辑下精确暂存](.memory/feedback-selective-staging-concurrent-work.md) — 仓库可能被并行会话同时改动，提交只 add 本任务文件，禁用 git add -A
 - [学说成因与原型转译分寸](.memory/feedback-doctrine-formation-archetype-honesty.md) — 学说转变写成自然形成而非有人篡改；现实原型的政治内核如实转译，不美化原型
