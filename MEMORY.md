@@ -32,3 +32,4 @@
 - [写作计划自动执行原则](.memory/feedback-writing-auto-execution.md) — 面对小说正文撰写等任务，智能体可自动决策直接执行，无需每次申请审批
 - [典籍与神话原型优先](.memory/feedback-reference-archetypes.md) — 核心概念先查佛道典籍、经典文献与世界神话原型，再转译进世界观
 - [每轮修改必须git提交](.memory/feedback-git-commit-after-revision.md) — 每轮修改完成后立即 git add + commit 落库并汇报提交哈希，不能只停在暂存
+- [形意与业的架构](.memory/project-xingyi-ye-architecture.md) — 形意实时对流为体，业为失当积累越过阈值后的大规模回流，非延后清算
