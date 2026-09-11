@@ -1,38 +1,67 @@
-- [Authorial Voice Preference](.memory/feedback-authorial-voice.md) — 创作内容保持正经作者口吻，避免幕后写作说明与出戏表述
-- [Artifact Writing Preference](.memory/feedback-artifact-writing-preference.md) — 器物条目优先写历史、特殊性、意义与代价，避免网文式神兵与纯剧情道具写法
-- [Avoid Catchphrase Repetition](.memory/feedback-avoid-catchphrase-repetition.md) — 压低骨脉肉与最冷最硬最怕等高频套话，避免词根和句型反复自我复制
-- [Character Format Hybrid](.memory/feedback-character-format-hybrid.md) — 人物条目采用 Markdown 主文加 JSON 底谱，并固定叙事层与结构层职责
-- [Character Identity Consistency](.memory/feedback-character-identity-consistency.md) — 人物现职必须单线稳定，其余经历写成旧履历或经手事项
-- [Character Relationship Interactions](.memory/feedback-character-relationship-interactions.md) — 新增人物先补清与旧角色的关系和互动分寸，不能只立单人设定
-- [Crosslink Continuity Preference](.memory/feedback-crosslink-continuity.md) — 扩写设定时同步补链接并回改相邻内容，优先保持世界观连贯
-- [Crosslink Filename Exactness](.memory/feedback-crosslink-filename-exactness.md) — 全仓库交叉引用严格匹配文件名，不得擅自改字、补空格或换标点
-- [Group Scene Voice Separation](.memory/feedback-group-scene-voice-separation.md) — 多人同场议论要按身份成本和情绪底色拉开发言，不能写成同一张嘴
-- [Character Entry Logic](.memory/feedback-character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
-- [Detailed Cultivation Systems Preference](.memory/feedback-detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
-- [No Repo Meta Wording](.memory/feedback-no-repo-meta-wording.md) — 交付文本避免“仓库里已有文档”等仓库外视角说法
-- [No Meaning Distortion](.memory/feedback-no-meaning-distortion.md) — 重写和润色不得扭曲用户原文结论、限制条件或输入本意
-- [Institutional Worldbuilding Depth](.memory/feedback-institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
-- [Cultivation Atmosphere Preference](.memory/feedback-cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
-- [Proofread Clarity And Dedup](.memory/feedback-proofread-clarity-and-dedup.md) — 清理半白话、病句与概念漂移，避免前后定义失真
-- [AGENTS Content Granularity](.memory/feedback-agents-content-granularity.md) — AGENTS 约束下单篇不超过 300 行，且尽量一篇只写一个概念
-- [Preserve Content During Rewrites](.memory/feedback-preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
-- [Preserve Original Era Logic](.memory/feedback-preserve-original-era-logic.md) — 重写旧条目先守住原文时代阶段和制度边界，避免按惯性提前写入后世结构
-- [Research Before Writing Preference](.memory/feedback-research-before-writing.md) — 创作前先检索仓库依据，再基于现有设定扩写，避免脱离上下文即兴编写
-- [Scene Extra Entry Exit Discipline](.memory/feedback-scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
-- [Style Variation Preference](.memory/feedback-style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
-- [Substantial Revision Depth](.memory/feedback-substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
-- [Image Script Workflow](.memory/feedback-image-script-workflow.md) — 生成各类图片时统一复用脚本、审图、改名并按版式插回正文的流程
-- [Social Hierarchy Calibration](.memory/feedback-social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
-- [Worldbuilding Prose Preference](.memory/feedback-worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
-- [Xuanhuan Lexicon Preference](.memory/feedback-xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
-- [Toponym Naming Rigor](.memory/feedback-toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
-- [人物条目必须补json](.memory/feedback_character_entries_require_json.md) — 常规人物保留 md+json，异类条目默认只写正文
-- [中文UTF-8编码](.memory/feedback-chinese-utf8-encoding.md) — 确保中文输出使用UTF-8编码避免乱码
-- [炽（炎皇）宿命身份设定](.memory/project-chi-origin-lore.md) — 炽天生圣脉但丹田碎裂、应九州共业临熟之缘而生、被律皇跨越时空扼杀的设定
-- [写作计划自动执行原则](.memory/feedback-writing-auto-execution.md) — 面对小说正文撰写等任务，智能体可自动决策直接执行，无需每次申请审批
-- [典籍与神话原型优先](.memory/feedback-reference-archetypes.md) — 核心概念先查佛道典籍、经典文献与世界神话原型，再转译进世界观
-- [每轮修改必须git提交](.memory/feedback-git-commit-after-revision.md) — 每轮修改完成后立即 git add + commit 落库并汇报提交哈希，不能只停在暂存
-- [形意与业的架构](.memory/project-xingyi-ye-architecture.md) — 形意实时对流为体，业为失当积累越过阈值后的大规模回流，非延后清算
-- [神族起源叙事遗留校准清单](.memory/project-god-origin-reconciliation-debt.md) — 九神「史书副座／残卷奴隶」双层口径与主神条目侧待统稿异说（1.神主漏倒生林等）
-- [并行编辑下精确暂存](.memory/feedback-selective-staging-concurrent-work.md) — 仓库可能被并行会话同时改动，提交只 add 本任务文件，禁用 git add -A
-- [学说成因与原型转译分寸](.memory/feedback-doctrine-formation-archetype-honesty.md) — 学说转变写成自然形成而非有人篡改；现实原型的政治内核如实转译，不美化原型
+## 文风与语言
+
+- [Authorial Voice & Meta Wording](.memory/文风与语言/style-meta-voice.md) — 正文禁幕后写作说明与"被写成"式元写作句式，交付说明禁"仓库里已有"等仓库外视角
+- [Avoid Catchphrase Repetition](.memory/文风与语言/avoid-catchphrase-repetition.md) — 压低骨脉肉与最冷最硬最怕等高频套话，避免词根和句型反复自我复制
+- [Style Variation Preference](.memory/文风与语言/style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
+- [Proofread Clarity And Dedup](.memory/文风与语言/proofread-clarity-and-dedup.md) — 清理半白话、病句与概念漂移，避免前后定义失真
+- [Cultivation Atmosphere Preference](.memory/文风与语言/cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
+- [Worldbuilding Prose Preference](.memory/文风与语言/worldbuilding-prose.md) — 世界背景与历史总纲应写成连贯小说化正文，避免散点提纲
+
+## 世界观方法
+
+- [Research Before Writing](.memory/世界观方法/research-before-writing.md) — 创作前先检索仓库依据再扩写；已固化为 AGENTS.md 阶段一强制管线，此处保留原因与强化方式
+- [Institutional Worldbuilding Depth](.memory/世界观方法/institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
+- [Detailed Cultivation Systems](.memory/世界观方法/detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
+- [Artifact Writing Preference](.memory/世界观方法/artifact-writing-preference.md) — 器物条目优先写历史、特殊性、意义与代价，避免网文式神兵与纯剧情道具写法
+- [AGENTS Content Granularity](.memory/世界观方法/agents-content-granularity.md) — AGENTS 约束下单篇不超过 300 行，且尽量一篇只写一个概念
+- [Worldbuilding Crosslink](.memory/世界观方法/worldbuilding-crosslink.md) — 交叉引用文件名逐字一致（已固化入 AGENTS.md），扩写时同步补链回改相邻内容保持连贯
+
+## 重写与修订
+
+- [No Meaning Distortion](.memory/重写与修订/no-meaning-distortion.md) — 重写和润色不得扭曲用户原文结论、限制条件或输入本意
+- [Preserve Content During Rewrites](.memory/重写与修订/preserve-content-during-rewrites.md) — 重写既有条目时尽量保留原文有效内容与结构，采用融合式改写
+- [Preserve Original Era Logic](.memory/重写与修订/preserve-original-era-logic.md) — 重写旧条目先守住原文时代阶段和制度边界，避免按惯性提前写入后世结构
+- [Substantial Revision Depth](.memory/重写与修订/substantial-revision-depth.md) — 系统修订类任务需做大篇幅内文融合式改写，不能停留在轻量补丁
+
+## 人物与群像
+
+- [Character Dual File](.memory/人物与群像/character-dual-file.md) — 常规人物必须 md 正文加 json 底谱双文件（已固化入 AGENTS.md），异类条目默认只写正文
+- [Character Identity Consistency](.memory/人物与群像/character-identity-consistency.md) — 人物现职必须单线稳定，其余经历写成旧履历或经手事项
+- [Character Relationship Interactions](.memory/人物与群像/character-relationship-interactions.md) — 新增人物先补清与旧角色的关系和互动分寸，不能只立单人设定
+- [Social Hierarchy Calibration](.memory/人物与群像/social-hierarchy-calibration.md) — 写人物冲突时要计入身份地位与尊卑秩序，底层通常不会直接顶撞上等人
+- [Group Scene Voice Separation](.memory/人物与群像/group-scene-voice-separation.md) — 多人同场议论要按身份成本和情绪底色拉开发言，不能写成同一张嘴
+- [Scene Extra Entry Exit Discipline](.memory/人物与群像/scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
+- [Character Entry Logic](.memory/人物与群像/character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
+
+## 茶馆系列
+
+- [Teahouse Cast List And Presence](.memory/茶馆系列/teahouse-cast-list-and-presence.md) — 出场人物栏目只写姓名与身份；在场缘由按开场已在场（茶馆情状）与中途进场（正文动作）分流安放
+- [Teahouse Scene Variety](.memory/茶馆系列/teahouse-scene-variety.md) — 茶馆新增内容避开已用场景套路；小人物先复用后新建，长期角色先立卡，新信息回填人物条目
+- [Teahouse Structure Clarity](.memory/茶馆系列/teahouse-structure-clarity.md) — 茶馆闲聊采用"背景概述/核心设定/出场人物/茶馆情状/席间杂论/余意"的稳定分段职责
+- [Teahouse Timeline First](.memory/茶馆系列/teahouse-timeline-first.md) — 续写茶馆先核对统一时间线，写完把新节点补回时间线
+- [Teahouse Reference Boundary](.memory/茶馆系列/teahouse-reference-boundary.md) — 历史报告、东阳选集等读者向材料只作茶馆幕后参考，不入众人之口
+- [Teahouse Labor Distinction](.memory/茶馆系列/teahouse-labor-distinction.md) — 茶馆底层固定角色需区分矿路苦工与城里碎活脚夫，不同人物承接不同底层逻辑
+
+## 命名与原型
+
+- [Toponym Naming Rigor](.memory/命名与原型/toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
+- [Xuanhuan Lexicon Preference](.memory/命名与原型/xuanhuan-lexicon.md) — 涉及现实原型时优先转译成古韵、玄幻化的世界内用语
+- [Reference Archetypes First](.memory/命名与原型/reference-archetypes.md) — 核心概念先查佛道典籍、经典文献与世界神话原型，再转译进世界观
+- [Doctrine Formation And Archetype Honesty](.memory/命名与原型/doctrine-formation-archetype-honesty.md) — 学说转变写成自然形成而非有人篡改；现实原型的政治内核如实转译，不美化原型
+
+## 历史与地理
+
+- [Historical Report Texture](.memory/历史与地理/historical-report-texture.md) — 九州历史报告优先伪史考据体，以撰者记、旧谱残篇、州志与口碑互证承载大事件
+- [Historical Worldbuilding Naming](.memory/历史与地理/historical-worldbuilding-naming.md) — 历史报告须检索现有九州州域体系使用已有地名，人物用近似名不照搬真实历史
+- [State And Reference Split](.memory/历史与地理/state-reference-split.md) — 州域双文件按"正文官面总录 + 参考稿民间异闻"分工，避免大段重复
+
+## 协作工作流
+
+- [Workflow Git](.memory/协作工作流/workflow-git.md) — 每轮修改立即 commit 并汇报哈希；并行会话下只逐个精确暂存本任务文件，禁 git add -A，防中文路径 diff 假阴性
+- [Chinese UTF-8 Encoding](.memory/协作工作流/chinese-utf8-encoding.md) — 确保中文输出使用UTF-8编码避免乱码
+- [Image Script Workflow](.memory/协作工作流/image-script-workflow.md) — 生成各类图片时统一复用脚本、审图、改名并按版式插回正文的流程
+- [Writing Auto Execution](.memory/协作工作流/writing-auto-execution.md) — 面对小说正文撰写等任务，智能体可自动决策直接执行，无需每次申请审批
+
+## 项目设定
+
+- [神族起源叙事遗留校准清单](.memory/项目设定/god-origin-debt-list.md) — 九神双层口径已固化入 势力/神族/AGENTS.md；主神条目侧五项遗留异说清单，统稿时逐项核销

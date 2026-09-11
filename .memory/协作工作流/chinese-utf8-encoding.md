@@ -1,4 +1,4 @@
-﻿---
+---
 name: chinese-utf8-encoding
 description: 中文输出应使用UTF-8编码
 type: feedback
