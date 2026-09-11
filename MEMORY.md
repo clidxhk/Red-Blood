@@ -33,15 +33,6 @@
 - [Scene Extra Entry Exit Discipline](.memory/人物与群像/scene-extra-entry-exit-discipline.md) — 过路客与龙套保持配角分寸，出场停留退场都要有基本缘由，避免熟人主角化
 - [Character Entry Logic](.memory/人物与群像/character-entry-logic.md) — 既有角色入场需顺着职责与边界，不用偶遇式硬接关键戏份
 
-## 茶馆系列
-
-- [Teahouse Cast List And Presence](.memory/茶馆系列/teahouse-cast-list-and-presence.md) — 出场人物栏目只写姓名与身份；在场缘由按开场已在场（茶馆情状）与中途进场（正文动作）分流安放
-- [Teahouse Scene Variety](.memory/茶馆系列/teahouse-scene-variety.md) — 茶馆新增内容避开已用场景套路；小人物先复用后新建，长期角色先立卡，新信息回填人物条目
-- [Teahouse Structure Clarity](.memory/茶馆系列/teahouse-structure-clarity.md) — 茶馆闲聊采用"背景概述/核心设定/出场人物/茶馆情状/席间杂论/余意"的稳定分段职责
-- [Teahouse Timeline First](.memory/茶馆系列/teahouse-timeline-first.md) — 续写茶馆先核对统一时间线，写完把新节点补回时间线
-- [Teahouse Reference Boundary](.memory/茶馆系列/teahouse-reference-boundary.md) — 历史报告、东阳选集等读者向材料只作茶馆幕后参考，不入众人之口
-- [Teahouse Labor Distinction](.memory/茶馆系列/teahouse-labor-distinction.md) — 茶馆底层固定角色需区分矿路苦工与城里碎活脚夫，不同人物承接不同底层逻辑
-
 ## 命名与原型
 
 - [Toponym Naming Rigor](.memory/命名与原型/toponym-naming-rigor.md) — 州域与势力命名不能用功能标签式占位名，必须像世界内旧名
