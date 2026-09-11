@@ -11,3 +11,9 @@ type: feedback
 **原因：** 本仓库实际存在多会话并行编辑（本次收尾时工作区多出神裔.md、业.md、世界背景.md、帝网.md、.memory/project-xingyi-ye-architecture.md 等绝非本任务产出的改动）。若用 git add -A，会把对方半成品一并提交，污染提交历史、抢走对方落库权，并可能提交未完成的设定。
 
 **应用场景：** 所有本仓库任务的阶段四 git 落库环节。收尾先 `git status --short` 与 `git diff --stat` 核对改动范围，逐个文件显式 add；对出现非预期改动的文件，先 `git diff -- <file>` 确认归属再决定。
+
+另：在 Git Bash 下用 `git diff --quiet -- "中文路径.md"` 判断文件是否干净会假阴性（中文参数经 shell 传递后匹配失败，导致已改动文件被误判为 CLEAN）。判断干净与否请改用 `git status --porcelain -z` 或 Python `subprocess.run([...])` 直接传参，不要依赖 shell 内联的中文路径字符串。
+
+**原因：** Windows + Git Bash 环境下中文路径经 shell 编码转换后与 git 内部路径不一致，`--quiet` 会返回 0（干净）而实际文件已有改动。本次收尾时据此误判过 9.农神.md 等文件为 CLEAN，险些把并行会话的在写改动一起提交。
+
+**应用场景：** 所有本仓库任务的阶段四改动归属核对环节。
