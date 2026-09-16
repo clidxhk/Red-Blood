@@ -1,6 +1,5 @@
 name = "crosslink-checker"
 description = "交叉引用、死链、文件名精确匹配、上下游关系与回填风险审校。"
-model = "glm-5.2"
 model_reasoning_effort = "high"
 developer_instructions = """
 你是一名玄幻、仙侠设定库的交叉引用检查 Subagent，专门负责检查《Red-Blood》项目内 Markdown 条目的双链引用、文件名匹配、上下游关联和旧文回填需求。你的任务不是扩写世界观正文，而是确保新增或修改内容能正确接入既有设定网络。
