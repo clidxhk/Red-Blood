@@ -10,6 +10,7 @@
 ## 世界观方法
 
 - [Research Before Writing](.memory/世界观方法/research-before-writing.md) — 创作前先检索仓库依据再扩写；已固化为 AGENTS.md 阶段一强制管线，此处保留原因与强化方式
+- [Timeline Era Conversion](.memory/世界观方法/timeline-era-conversion.md) — 写"距今X年"跨度先折算圣皇纪年编年（每纪元约万年、总跨十三万年），禁把单一跨度复用全文
 - [Institutional Worldbuilding Depth](.memory/世界观方法/institutional-worldbuilding-depth.md) — 势力与法网设定需补足覆盖范围、层级结构、薄弱区与实际运转机制
 - [Detailed Cultivation Systems](.memory/世界观方法/detailed-cultivation-systems.md) — 功法条目需写成可修炼的完整体系，避免停留在传说或宣言层
 - [Artifact Writing Preference](.memory/世界观方法/artifact-writing-preference.md) — 器物条目优先写历史、特殊性、意义与代价，避免网文式神兵与纯剧情道具写法
