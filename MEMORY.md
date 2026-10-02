@@ -43,7 +43,7 @@
 
 ## 历史与地理
 
-- [Historical Report Texture](.memory/历史与地理/historical-report-texture.md) — 九州历史报告优先伪史考据体，以撰者记、旧谱残篇、州志与口碑互证承载大事件
+- [Historical Report Texture](.memory/历史与地理/historical-report-texture.md) — 历史报告遵从司马迁风格白话文，以实录重人事原委与太史公论赞，严禁口癖与现代论文/阶级政论腔
 - [Historical Worldbuilding Naming](.memory/历史与地理/historical-worldbuilding-naming.md) — 历史报告须检索现有九州州域体系使用已有地名，人物用近似名不照搬真实历史
 - [State And Reference Split](.memory/历史与地理/state-reference-split.md) — 州域双文件按"正文官面总录 + 参考稿民间异闻"分工，避免大段重复
 
