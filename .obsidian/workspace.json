@@ -37,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -152,27 +154,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "欢迎.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "欢迎 的大纲"
-            }
-          },
-          {
-            "id": "dbf804a06812cd66",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "大纲"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -186,12 +177,20 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false,
-      "obsidian-git:Open Git source control": false
+      "bases:新建数据库": false
     }
   },
   "active": "e86e812aab05a1ec",
   "lastOpenFiles": [
+    "势力/九州/民间/连山盟祖堂仪轨.md",
+    "势力/九州/民间/连山盟堂口层级.md",
+    "势力/九州/民间/连山盟.md",
+    "州郡/九州地域/九州地域.png",
+    "器物/神族/天弧.md",
+    "州郡/九州地域/海约租界.md",
+    "州郡/九州地域/九州地域.svg",
+    "州郡/九州地域/沧门州/沧门州.png",
+    "州郡/九州地域/沧门州/沧楼港.md",
     "历史/烈皇西征.md",
     "历史/衡皇远航.md",
     "历史/东来黑死.md",
@@ -214,12 +213,6 @@
     "背景/能源-灵石.md",
     "角色/神族人物/宁列·火星.md",
     "故事/茶馆闲聊/灯下短论/23. 茶馆闲聊·花魁.md",
-    "故事/茶馆闲聊/灯下短论/22. 茶馆闲聊·节盘.md",
-    "异类/神族/旧契·摩律.md",
-    "族群/神族/契族.md",
-    "异类/神族/半花·花伶.md",
-    "族群/神族/绯裔.md",
-    "族群/神族/狼人.md",
     "族群/神族",
     "族群/九州",
     "族群",
