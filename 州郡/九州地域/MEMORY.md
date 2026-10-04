@@ -1,1 +1,1 @@
-- [State And Reference Split](.memory/feedback-state-reference-split.md) — 正文走官面总录，参考稿走民间流传与异闻补注，二者尽量错开信息层
+- [State And Reference Split](../../.memory/历史与地理/state-reference-split.md) — 州域正文载官修舆地总录，参考稿汇集民间异闻补注，双轨并立以充实世界层次
