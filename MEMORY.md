@@ -1,7 +1,7 @@
 ## 文风与语言
 
 - [Authorial Voice & Meta Wording](.memory/文风与语言/style-meta-voice.md) — 正文禁幕后写作说明与"被写成"式元写作句式，交付说明禁"仓库里已有"等仓库外视角
-- [Avoid Catchphrase Repetition](.memory/文风与语言/avoid-catchphrase-repetition.md) — 严控高频套话与转折垫字口癖，压低“骨/脉/肉”、“最冷/最硬/最怕”及“后世/故而/论及/若说”等重复出现
+- [Avoid Catchphrase Repetition](.memory/文风与语言/avoid-catchphrase-repetition.md) — 严控口癖：垫字（后世/故而/论及/若说）、器官词（骨/脉/肉）、绝对化（最冷/最硬/最怕）、单字口癖（旧X造词/万能压动词）及保护例外清单与分级指标
 - [Style Variation Preference](.memory/文风与语言/style-variation.md) — 主动变化句法与文风，避免多篇设定文档口吻高度同质化
 - [Proofread Clarity And Dedup](.memory/文风与语言/proofread-clarity-and-dedup.md) — 清理半白话、病句与概念漂移，避免前后定义失真
 - [Cultivation Atmosphere Preference](.memory/文风与语言/cultivation-atmosphere.md) — 全仓库正文尽量保持修仙气，连闲聊与市井条目也要有修行世界底色
