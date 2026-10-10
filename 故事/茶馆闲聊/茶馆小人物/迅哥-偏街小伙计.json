@@ -37,14 +37,14 @@
     "origin": {
       "birth_region": "九州州城旧吏巷",
       "family_background": "小官吏之家，原有些许体面与旧藏书",
-      "father": "州县小吏，净天国起义后失官败落",
+      "father": "州县小吏，净天国动乱后失官败落",
       "mother": "持家妇人，靠典卖旧物和缝补支撑家计",
       "social_position": "败落官家后生，介于寒门与市井之间"
     },
     "turning_points": [
       {
         "stage": "家门失势",
-        "summary": "父亲在净天国起义后余波中丢官，全家由旧日小体面滑入困顿",
+        "summary": "父亲在净天国动乱后余波中丢官，全家由旧日小体面滑入困顿",
         "sensory_impression": "官服被收走后的空木箱、屋里只剩半匣旧讲义和药气",
         "world_effect": "使其很早明白功名与官路并不稳固"
       },
