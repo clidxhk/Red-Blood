@@ -63,7 +63,7 @@
     },
     {
       "id": "1822b1a0e675c6ee",
-      "path": "故事/茶馆闲聊/茶馆小人物/老舒-茶馆掌柜(赤龙).json",
+      "path": "角色/茶馆人物/老舒-茶馆掌柜(赤龙).json",
       "start_line": 15,
       "end_line": 36,
       "sha256": "cf65ad6934c52096dd7cf7a1d3163f508d635346e8afda0236a0756193a1da60",
@@ -81,7 +81,7 @@
     },
     {
       "id": "ed0a112d7a30bd7c",
-      "path": "故事/茶馆闲聊/茶馆小人物/沈相公-落魄旧文人.json",
+      "path": "角色/茶馆人物/沈相公-落魄旧文人.json",
       "start_line": 15,
       "end_line": 36,
       "sha256": "f606a622bd0a8a7dd7b115de9b95b24a782e8f0ab02ddc2e5bc684cb5a372028",
