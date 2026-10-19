@@ -60,6 +60,18 @@ Git 在这里承担的是集体记忆骨架。
 - **审校不修改正文**：阶段三的四个审校 subagent 只出报告，修正由主架构师亲自执行，确保修改可追溯、不引入新噪音。
 - **并行与依赖**：`tone-checker` 和 `crosslink-checker` 可并行调用，`character-reviewer` 和 `worldbuilding-consistency` 可并行调用，但两组间有依赖顺序——前一组可能产生需要后一组重新检查的修正。
 
+### 场景运行层
+
+在四阶段管线内，场景材料可以先组成来源可核验的设定包，再分别提供给导演、写手与人物发言者。开场事实、个人信念、言谈分寸与候选事件分别记录，分支试演不自动改写正式设定。
+
+- [修改路径与分阶段验收](./scripts/scene_runtime/PLAN.md)：职责修复 → 数据协议与离线工具 → 已完回目回放 → 后续真实创作试用。
+- [协议与使用说明](./scripts/scene_runtime/README.md)：来源哈希、时间范围、逐人可见性、字符预算及分支规则。
+- [第一回开场回放材料](./scripts/scene_runtime/examples/teahouse-replay.json)：从原文摘取的环境和两名人物语态，不续写对白或新增事件。
+
+工具入口为 `python scripts/scene_runtime.py`，支持 `validate`、`build`、`fork`；实际生成包保存在忽略于 Git 和内容索引的 `.workbench/runs/`。工具仅验证和组装文件，不调用模型或隔离文件权限，真实预演与审校仍由主架构师调度。
+
+指定内容范围的双链目标检查使用 `python scripts/check_crossrefs.py --check-links <文件或目录>`，可发现死链、错名与同名歧义；原裸词模式继续辅助发现漏链。完整验证运行 `python -m unittest discover -s scripts -p "test_*.py" -v`。
+
 ---
 
 ## 世界骨架

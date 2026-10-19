@@ -18,7 +18,7 @@ import sys
 import io
 
 # Fix Windows console encoding for Chinese output
-if sys.platform == "win32":
+if sys.platform == "win32" and __name__ == "__main__":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
@@ -39,7 +39,7 @@ ROOT = Path(__file__).resolve().parent.parent
 # Directories to exclude from scanning entirely
 SKIP_DIRS = {
     ".claude", ".codex", ".gemini", ".memory", ".obsidian",
-    "scripts", "__pycache__", ".git",
+    "scripts", ".workbench", "__pycache__", ".git",
 }
 
 # Filenames (exact) to exclude from the target-name set
@@ -63,6 +63,60 @@ DEFAULT_MIN_LENGTH = 2
 
 # Regex to find all [[...]] wrapped references
 CROSSREF_RE = re.compile(r"\[\[(.+?)\]\]")
+LINK_TARGET_RE = re.compile(r"\[\[([^\[\]\r\n]*)\]\]")
+
+
+def collect_link_targets(root: Path) -> dict[str, list[Path]]:
+    """Index exact content filenames, retaining short names and ambiguities."""
+    targets: dict[str, list[Path]] = defaultdict(list)
+    for path in sorted(root.rglob("*.md")):
+        if is_content_file(path, root):
+            targets[path.stem].append(path)
+    return dict(targets)
+
+
+def check_link_targets(path: Path, root: Path, targets: dict[str, list[Path]]) -> list[dict]:
+    """Report missing or ambiguous [[filename]] targets without changing text."""
+    text = path.read_text(encoding="utf-8-sig")
+    results = []
+    for match in LINK_TARGET_RE.finditer(text):
+        name = match.group(1)
+        matches = targets.get(name, [])
+        if len(matches) != 1:
+            results.append({
+                "file": path.relative_to(root).as_posix(),
+                "line": text.count("\n", 0, match.start()) + 1,
+                "target": name,
+                "kind": "missing" if not matches else "ambiguous",
+            })
+    return results
+
+
+def check_selected_links(root: Path, requested: list[str]) -> int:
+    """A scoped, read-only mode; never expand a request outside the repository."""
+    root = root.resolve()
+    selected = set()
+    for name in requested:
+        path = (root / name).resolve()
+        if not path.is_relative_to(root) or not path.exists():
+            raise ValueError(f"检查路径不存在或越出项目：{name}")
+        candidates = sorted(path.rglob("*.md")) if path.is_dir() else [path]
+        for candidate in candidates:
+            resolved = candidate.resolve()
+            if not resolved.is_relative_to(root):
+                raise ValueError(f"检查路径越出项目：{name}")
+            if is_content_file(candidate, root):
+                selected.add(candidate)
+    if not selected:
+        raise ValueError("所选范围没有可检查的设定 Markdown 文件")
+    targets = collect_link_targets(root)
+    results = []
+    for path in sorted(selected):
+        results.extend(check_link_targets(path, root, targets))
+    for item in results:
+        print(f"{item['file']}:{item['line']} [{item['kind']}] [[{item['target']}]]")
+    print(f"已检查 {len(selected)} 个文件；错链或歧义 {len(results)} 处。")
+    return 1 if results else 0
 
 
 # ---------------------------------------------------------------------------
@@ -88,6 +142,19 @@ def should_skip_target(name: str) -> bool:
     return False
 
 
+def is_content_file(path: Path, root: Path) -> bool:
+    """Working files remain excluded even through an in-repository directory link."""
+    if not path.is_file() or path.suffix != ".md":
+        return False
+    try:
+        declared = path.relative_to(root)
+        resolved = path.resolve().relative_to(root.resolve())
+    except ValueError:
+        return False
+    return all(not should_skip_dir(p.parts) and not should_skip_target(p.name)
+               for p in (declared, resolved))
+
+
 def collect_targets(root: Path, min_length: int) -> dict[str, Path]:
     """
     Walk the repo and return {stem: full_path} for every content .md file.
@@ -96,6 +163,8 @@ def collect_targets(root: Path, min_length: int) -> dict[str, Path]:
     """
     targets: dict[str, Path] = {}
     for md_path in root.rglob("*.md"):
+        if not is_content_file(md_path, root):
+            continue
         rel = md_path.relative_to(root)
         parts = rel.parts
         if should_skip_dir(parts):
@@ -279,7 +348,20 @@ def main():
         "--yes", "-y", action="store_true",
         help="Skip confirmation prompt when using --fix",
     )
+    parser.add_argument(
+        "--check-links", nargs="+", metavar="PATH",
+        help="只读核验指定内容文件或目录内的双链目标，包括单字文件名与重名歧义；失败返回非零",
+    )
     args = parser.parse_args()
+
+    if args.check_links is not None:
+        if args.fix:
+            parser.error("--check-links 是只读模式，不能与 --fix 同用")
+        try:
+            return check_selected_links(ROOT, args.check_links)
+        except (OSError, UnicodeError, ValueError) as exc:
+            print(f"[ERROR] {exc}", file=sys.stderr)
+            return 2
 
     # Phase 1: collect all target stems
     targets = collect_targets(ROOT, args.min_length)
@@ -288,6 +370,8 @@ def main():
     # Phase 2: find all content .md files to scan
     scan_files = []
     for md_path in ROOT.rglob("*.md"):
+        if not is_content_file(md_path, ROOT):
+            continue
         rel = md_path.relative_to(ROOT)
         if should_skip_dir(rel.parts):
             continue
@@ -408,4 +492,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

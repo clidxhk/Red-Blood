@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "scene": {
+    "id": "teahouse-01-opening-replay",
+    "title": "第一回开场材料回放：仅验证组包，不生成演出",
+    "time": {
+      "timeline": "teahouse-episodes",
+      "order": 1,
+      "label": "第一回茶馆情状结束、席间闲谈开始之前"
+    },
+    "target_paths": [
+      "故事/茶馆闲聊/灯下短论/1. 茶馆闲聊·英雄.md"
+    ],
+    "budget_chars": 120000,
+    "required_reviews": [
+      "tone",
+      "crosslink",
+      "character"
+    ]
+  },
+  "branch": {
+    "id": "replay-base",
+    "parent": null
+  },
+  "sources": [
+    {
+      "id": "f3b105c872d54c47",
+      "path": "故事/茶馆闲聊/灯下短论/1. 茶馆闲聊·英雄.md",
+      "start_line": 7,
+      "end_line": 11,
+      "sha256": "c08244129abd2d46c0366ef427963d0728c2db2b7376ca097000fd08f3623c3c",
+      "valid_from": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "valid_until": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "disclose_to": [
+        "director",
+        "writer"
+      ]
+    },
+    {
+      "id": "b4e42317581e317c",
+      "path": "故事/茶馆闲聊/灯下短论/1. 茶馆闲聊·英雄.md",
+      "start_line": 41,
+      "end_line": 52,
+      "sha256": "c08244129abd2d46c0366ef427963d0728c2db2b7376ca097000fd08f3623c3c",
+      "valid_from": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "valid_until": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "disclose_to": [
+        "director",
+        "writer"
+      ]
+    },
+    {
+      "id": "1822b1a0e675c6ee",
+      "path": "故事/茶馆闲聊/茶馆小人物/老舒-茶馆掌柜(赤龙).json",
+      "start_line": 15,
+      "end_line": 36,
+      "sha256": "cf65ad6934c52096dd7cf7a1d3163f508d635346e8afda0236a0756193a1da60",
+      "valid_from": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "valid_until": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "disclose_to": [
+        "director"
+      ]
+    },
+    {
+      "id": "ed0a112d7a30bd7c",
+      "path": "故事/茶馆闲聊/茶馆小人物/沈相公-落魄旧文人.json",
+      "start_line": 15,
+      "end_line": 36,
+      "sha256": "f606a622bd0a8a7dd7b115de9b95b24a782e8f0ab02ddc2e5bc684cb5a372028",
+      "valid_from": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "valid_until": {
+        "timeline": "teahouse-episodes",
+        "order": 1
+      },
+      "disclose_to": [
+        "director"
+      ]
+    }
+  ],
+  "actors": [
+    {
+      "id": "laoshu",
+      "name": "老舒",
+      "persona": [
+        {
+          "text": "抠门、怕事、会赔笑、爱把铜钱算到最末一文",
+          "source_ids": [
+            "1822b1a0e675c6ee"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:laoshu"
+          ]
+        },
+        {
+          "text": "平日发干发哑，遇事压低时反而稳",
+          "source_ids": [
+            "1822b1a0e675c6ee"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:laoshu"
+          ]
+        },
+        {
+          "text": "老舒最怕：茶馆毁在自己手里，连同熟客与暗线的一口气也一并断掉（人物恐惧，并非已发生事实）",
+          "source_ids": [
+            "1822b1a0e675c6ee"
+          ],
+          "disclose_to": [
+            "director"
+          ]
+        }
+      ],
+      "beliefs": [],
+      "state": [
+        {
+          "text": "[[老舒]]照旧嫌茶客坐得久，嘴里念着一壶茶兑到第三回就不值钱了，手底下却没有赶人。他把三盏豆油灯拨得低些，又把柜边那口铜壶往炉心推了半寸。壶水将滚未滚，盖子轻轻顶着，像谁在桌底用指节敲木。",
+          "source_ids": [
+            "b4e42317581e317c"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:laoshu"
+          ]
+        }
+      ],
+      "speech_limits": []
+    },
+    {
+      "id": "shenxianggong",
+      "name": "沈相公",
+      "persona": [
+        {
+          "text": "温吞、斯文、略带寒酸，还留着旧式读书人的拘谨",
+          "source_ids": [
+            "ed0a112d7a30bd7c"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:shenxianggong"
+          ]
+        },
+        {
+          "text": "不高，却清，真说到冷处时反而更稳",
+          "source_ids": [
+            "ed0a112d7a30bd7c"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:shenxianggong"
+          ]
+        }
+      ],
+      "beliefs": [],
+      "state": [
+        {
+          "text": "[[沈相公]]的长衫下摆被雨水溅湿，贴在膝边",
+          "source_ids": [
+            "b4e42317581e317c"
+          ],
+          "disclose_to": [
+            "director",
+            "writer",
+            "actor:shenxianggong"
+          ]
+        }
+      ],
+      "speech_limits": []
+    }
+  ],
+  "facts": [
+    {
+      "text": "那夜雨才停，[[熔城]]南段偏街的砖缝里还往上返着潮热。",
+      "source_ids": [
+        "b4e42317581e317c"
+      ],
+      "disclose_to": [
+        "director",
+        "writer",
+        "actor:laoshu",
+        "actor:shenxianggong"
+      ]
+    }
+  ],
+  "public_history": [],
+  "unknowns": [],
+  "events": []
+}

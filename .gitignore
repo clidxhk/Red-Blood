@@ -1,5 +1,6 @@
 scripts/.env
 scripts/__pycache__
+.workbench/
 .omc
 .mcp.json
 .claude/config.json
