@@ -1,0 +1,706 @@
+{
+  "format_version": 1,
+  "document_type": "world_constraint_cards",
+  "authority": "derived_index",
+  "baseline": "BASELINE.md",
+  "conflict_register": "CONFLICTS.md",
+  "sources": [
+    {
+      "id": "S01",
+      "path": "背景/AGENTS.md",
+      "sha256": "f103ac4236a44ef3a699779a51ed00866643254598d63f14b6a25efb0cb104c6"
+    },
+    {
+      "id": "S02",
+      "path": "背景/业.md",
+      "sha256": "da0ba625d8aa02e98ac787b97e21efc162807f9d9c7799093080e31b81673bbf"
+    },
+    {
+      "id": "S03",
+      "path": "背景/帝网.md",
+      "sha256": "6333b3061193ae51d2922a8b734601e62416f64a7922af19de734ba1308c416e"
+    },
+    {
+      "id": "S04",
+      "path": "势力/神族/传说/神裔.md",
+      "sha256": "daa7f7c217d1851f93b0ec36b2bcc7ffd77485d08cae45198104372ac5d359d7"
+    },
+    {
+      "id": "S05",
+      "path": "势力/神族/传说/神敕与真名.md",
+      "sha256": "5b06c0d2c1ac0124ef9590b48af54c02a02ebbe1af46a4bc7c4f849af9731f43"
+    },
+    {
+      "id": "S06",
+      "path": "AGENTS.md",
+      "sha256": "af2ed7db40b876878e4cb455fd847df32a9188e85df9ae39d684092b7410c480"
+    },
+    {
+      "id": "S07",
+      "path": "背景/修士境界.md",
+      "sha256": "b1ed82cc94ddb766cc815165ee581bf468e382e5dbb0a6c150ab2578b70a0414"
+    },
+    {
+      "id": "S08",
+      "path": "背景/九州与神族之别.md",
+      "sha256": "a4cd5695fbde309c3ab24d1e8eeb8de167b19222f58eff961b46df570e4579bd"
+    }
+  ],
+  "rules": [
+    {
+      "id": "R01",
+      "status": "confirmed_in_selected_sources",
+      "statement": "形意实时对流，失当即时留痕。",
+      "scope": {
+        "domains": [
+          "形意对流",
+          "业痕"
+        ],
+        "applies_when": [
+          "解释意脉对形脉的不当索取及其当下形变。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "即时留痕不等于全部业果都在当场集中爆发。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S01",
+          "line_ranges": [
+            {
+              "start": 9,
+              "end": 12
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "形意",
+          "对流",
+          "失当",
+          "业痕"
+        ],
+        "related_rule_ids": [
+          "R02",
+          "R03"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R02",
+      "status": "confirmed_in_selected_sources",
+      "statement": "失当累积越过承载阈值后，业果集中反冲；高位先受冲击属于结构牵连。",
+      "scope": {
+        "domains": [
+          "业果",
+          "网络承载"
+        ],
+        "applies_when": [
+          "讨论失当积累越阈后的集中反冲及承载位置。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "不能把结构性牵连改成天地按善恶择人奖惩。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S01",
+          "line_ranges": [
+            {
+              "start": 17,
+              "end": 18
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "业果",
+          "阈值",
+          "反冲",
+          "高位"
+        ],
+        "related_rule_ids": [
+          "R01",
+          "R05",
+          "R06"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R03",
+      "status": "confirmed_in_selected_sources",
+      "statement": "转嫁改变局部负荷落点，不能抹除天地总偏枯。",
+      "scope": {
+        "domains": [
+          "业",
+          "转嫁",
+          "帝网"
+        ],
+        "applies_when": [
+          "判断分流、转嫁或器物承业是否实际消除了天地负担。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "局部脱身不等于天地恢复，白傀挪移落点不减少总偏。"
+        },
+        {
+          "basis": "source_stated",
+          "text": "此规则不排斥通过停取、归还与修复逐步恢复对流，须同时阅读R04。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S01",
+          "line_ranges": [
+            {
+              "start": 19,
+              "end": 19
+            }
+          ]
+        },
+        {
+          "source_id": "S02",
+          "line_ranges": [
+            {
+              "start": 88,
+              "end": 88
+            },
+            {
+              "start": 94,
+              "end": 98
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "转嫁",
+          "分流",
+          "承业",
+          "白傀",
+          "消业"
+        ],
+        "related_rule_ids": [
+          "R01",
+          "R02",
+          "R04"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R04",
+      "status": "confirmed_in_selected_sources",
+      "statement": "停取、归还与修补可以使失衡逐步恢复。",
+      "scope": {
+        "domains": [
+          "业",
+          "修复",
+          "对流"
+        ],
+        "applies_when": [
+          "讨论停止抽取、返还所夺及修补形脉和承载网络的实际效果。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "不能将既成损害一笔勾销，也不保证立即显现祥瑞。"
+        },
+        {
+          "basis": "unsupported_inference",
+          "text": "具体新法门是否完成修复，仍须给出机制与条件；仅宣称善行不足以证明其效果。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "line_ranges": [
+            {
+              "start": 94,
+              "end": 98
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "停取",
+          "归还",
+          "还养",
+          "修复",
+          "消业"
+        ],
+        "related_rule_ids": [
+          "R01",
+          "R03",
+          "R05"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R05",
+      "status": "confirmed_in_selected_sources",
+      "statement": "苦难不证明受难者有罪，承负不是血脉原罪。",
+      "scope": {
+        "domains": [
+          "业",
+          "承负",
+          "责任"
+        ],
+        "applies_when": [
+          "讨论受难、个人造作、继统或承接抽取网络的责任。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "承接网络和继统后的实际行为须分别考察；不能凭灾祸或门第倒推道德罪责。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S02",
+          "line_ranges": [
+            {
+              "start": 27,
+              "end": 27
+            },
+            {
+              "start": 37,
+              "end": 41
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "苦难",
+          "业报",
+          "承负",
+          "继统",
+          "血脉原罪"
+        ],
+        "related_rule_ids": [
+          "R02",
+          "R04"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R06",
+      "status": "confirmed_in_selected_sources",
+      "statement": "帝网承托的高位法威依赖供养、组织与回路。",
+      "scope": {
+        "domains": [
+          "帝网",
+          "高位法威",
+          "供养"
+        ],
+        "applies_when": [
+          "解释凭帝网承托、调动和维持的长期伟力。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "不能把网络供养、役修、名分和民心的作用全数归为个人孤力。"
+        },
+        {
+          "basis": "unsupported_inference",
+          "text": "原文没有规定每位修者必须任官，或每次施法须获众人现场许可。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S03",
+          "line_ranges": [
+            {
+              "start": 26,
+              "end": 34
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "帝网",
+          "供养",
+          "役修",
+          "名分",
+          "高位法威"
+        ],
+        "related_rule_ids": [
+          "R02",
+          "R07"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R07",
+      "status": "confirmed_in_selected_sources",
+      "statement": "帝网覆盖不均，边陲仍非当然的网外之地。",
+      "scope": {
+        "domains": [
+          "帝网",
+          "边陲",
+          "地域覆盖"
+        ],
+        "applies_when": [
+          "讨论原文帝网覆盖范围内的边陲、控制衰减和交通回路。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "地处边陲不自动意味着完全脱网；仍在网中也不等于各地控制强度相同。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S03",
+          "line_ranges": [
+            {
+              "start": 54,
+              "end": 63
+            },
+            {
+              "start": 101,
+              "end": 101
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "帝网",
+          "边陲",
+          "疆界",
+          "衰减",
+          "网外"
+        ],
+        "related_rule_ids": [
+          "R06"
+        ]
+      },
+      "pending_conflict_ids": [],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R08",
+      "status": "confirmed_in_selected_sources",
+      "statement": "神裔重数是出生位格，不是修为或直接战力值。",
+      "scope": {
+        "domains": [
+          "神裔",
+          "重数",
+          "位格"
+        ],
+        "applies_when": [
+          "讨论神裔出生时的形意位格距离与其力量表现。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "力量、功勋或地位的增强不自动改变出生重数。"
+        },
+        {
+          "basis": "unsupported_inference",
+          "text": "不能仅据重数建立境界换算、数字战力或必胜排序。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S04",
+          "line_ranges": [
+            {
+              "start": 54,
+              "end": 58
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "神裔",
+          "重数",
+          "位格",
+          "血脉",
+          "战力"
+        ],
+        "related_rule_ids": [
+          "R09",
+          "R10"
+        ]
+      },
+      "pending_conflict_ids": [
+        "C03"
+      ],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R09",
+      "status": "confirmed_in_selected_sources",
+      "statement": "神裔繁衍不按每代机械降一重，同胞可以不同重；觉醒和返祖不等于提高出生重数。",
+      "scope": {
+        "domains": [
+          "神裔",
+          "繁衍",
+          "觉醒",
+          "返祖"
+        ],
+        "applies_when": [
+          "讨论后代重数落点及同一后裔觉醒、返祖前后的变化。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "返祖可以显出祖源痕迹和禀赋，不因此改变出生重数。"
+        },
+        {
+          "basis": "unsupported_inference",
+          "text": "原文未给可用于精确预测每名子嗣的重数遗传公式。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S04",
+          "line_ranges": [
+            {
+              "start": 68,
+              "end": 70
+            },
+            {
+              "start": 94,
+              "end": 98
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "神裔",
+          "繁衍",
+          "同胞",
+          "觉醒",
+          "返祖"
+        ],
+        "related_rule_ids": [
+          "R08"
+        ]
+      },
+      "pending_conflict_ids": [
+        "C03"
+      ],
+      "review_mode": "human_semantic_review"
+    },
+    {
+      "id": "R10",
+      "status": "confirmed_in_selected_sources",
+      "statement": "承名借印与自凝真名具有不同的力量依赖及除名机制。",
+      "scope": {
+        "domains": [
+          "神敕",
+          "借印",
+          "真名"
+        ],
+        "applies_when": [
+          "对象实际符合来源所述借印或自凝真名路径；自称真名者不自动满足此条件。"
+        ],
+        "temporal_status": "unspecified_in_sources"
+      },
+      "boundaries": [
+        {
+          "basis": "source_stated",
+          "text": "借印者受神印品阶、收印与业力转嫁制约；自凝真名不受该文书除名机制拘束。"
+        },
+        {
+          "basis": "unsupported_inference",
+          "text": "不能将文书除名失效推广为对一切攻击免疫，原文仍描述神廷合围扼杀。"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "S05",
+          "line_ranges": [
+            {
+              "start": 29,
+              "end": 39
+            },
+            {
+              "start": 49,
+              "end": 53
+            }
+          ]
+        }
+      ],
+      "retrieval_hints": {
+        "keywords": [
+          "神敕",
+          "借印",
+          "神印",
+          "真名",
+          "除名"
+        ],
+        "related_rule_ids": [
+          "R03",
+          "R08"
+        ]
+      },
+      "pending_conflict_ids": [
+        "C02"
+      ],
+      "review_mode": "human_semantic_review"
+    }
+  ],
+  "pending_items": [
+    {
+      "id": "C01",
+      "status": "pending_resolution",
+      "type": "source_difference",
+      "summary": "根规范列七个境界名称，详细专篇列九境；是否简写或过期尚未核定。",
+      "evidence": [
+        {
+          "source_id": "S06",
+          "line_ranges": [
+            {
+              "start": 115,
+              "end": 115
+            }
+          ]
+        },
+        {
+          "source_id": "S07",
+          "line_ranges": [
+            {
+              "start": 11,
+              "end": 11
+            },
+            {
+              "start": 19,
+              "end": 27
+            }
+          ]
+        }
+      ],
+      "safe_usage": "保留两处原文及差异，不自行删除洞虚、合体或统一全序列。"
+    },
+    {
+      "id": "C02",
+      "status": "pending_resolution",
+      "type": "comparison_boundary",
+      "summary": "大乘段并举圣皇和主神，与真名者可抗衡大乘的比较边界尚未核定。",
+      "evidence": [
+        {
+          "source_id": "S07",
+          "line_ranges": [
+            {
+              "start": 85,
+              "end": 85
+            }
+          ]
+        },
+        {
+          "source_id": "S05",
+          "line_ranges": [
+            {
+              "start": 81,
+              "end": 81
+            }
+          ]
+        }
+      ],
+      "safe_usage": "境界、身份和对抗条件分开记录，不把抗衡当作同境或建立普遍换算。"
+    },
+    {
+      "id": "C03",
+      "status": "pending_resolution",
+      "type": "wording_tension",
+      "summary": "重数与神光的比较表述和非直接力量值的明文之间存在解释边界。",
+      "evidence": [
+        {
+          "source_id": "S08",
+          "line_ranges": [
+            {
+              "start": 74,
+              "end": 74
+            }
+          ]
+        },
+        {
+          "source_id": "S04",
+          "line_ranges": [
+            {
+              "start": 56,
+              "end": 56
+            },
+            {
+              "start": 98,
+              "end": 98
+            }
+          ]
+        }
+      ],
+      "safe_usage": "位格、修为、借印权柄分栏，不从神光直接推战力；不否定出生重数非修为的独立明文。"
+    }
+  ],
+  "interpretation_notes": [
+    {
+      "id": "N01",
+      "status": "clarified",
+      "summary": "神族宣称或妄图延期折冲属于主体立场，不证明无代价消业实际成立；审阅时区分说法和效果。",
+      "evidence": [
+        {
+          "source_id": "S08",
+          "line_ranges": [
+            {
+              "start": 66,
+              "end": 66
+            }
+          ]
+        },
+        {
+          "source_id": "S01",
+          "line_ranges": [
+            {
+              "start": 17,
+              "end": 19
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

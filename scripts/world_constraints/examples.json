@@ -1,0 +1,313 @@
+{
+  "format_version": 1,
+  "document_type": "human_review_examples",
+  "authority": "illustrative_not_canon",
+  "cards": "cards.json",
+  "examples": [
+    {
+      "id": "E01",
+      "rule_ids": [
+        "R01"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "形意失当即时留痕，集中反冲可在累积后发生。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "即时留痕不等于全部后果当场爆发。"
+    },
+    {
+      "id": "E02",
+      "rule_ids": [
+        "R01"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "形意失当当时不留任何痕迹，百年后才开始留痕。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "否定了失当即时留痕。"
+    },
+    {
+      "id": "E03",
+      "rule_ids": [
+        "R02"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "失当累积越过承载阈值后集中反冲，高位先受牵连。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "保留了承载阈值与结构牵连。"
+    },
+    {
+      "id": "E04",
+      "rule_ids": [
+        "R02"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "高位先受反冲，是天地认定其道德罪责更重。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "将结构后果改成天地的道德审判。"
+    },
+    {
+      "id": "E05",
+      "rule_ids": [
+        "R03"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "转嫁可以改变负担落点，天地总偏枯仍未消除。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "区分了局部负担变化与总负担消除。"
+    },
+    {
+      "id": "E06",
+      "rule_ids": [
+        "R03"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "只要把负担转给别人，天地总偏枯便彻底消失。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "转嫁不能抹除总偏枯。"
+    },
+    {
+      "id": "E07",
+      "rule_ids": [
+        "R04"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "停取、归还与修补可逐步缓解失衡，既成损害仍须面对。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "恢复是过程，不是一笔勾销。"
+    },
+    {
+      "id": "E08",
+      "rule_ids": [
+        "R04"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "只要行善，当日必有天降祥瑞作为回报。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "将不保证立即祥瑞改成必然的当日回报。"
+    },
+    {
+      "id": "E09",
+      "rule_ids": [
+        "R05"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "受难本身不能证明有罪，承负也不构成出生原罪。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "没有从遭遇倒推道德责任。"
+    },
+    {
+      "id": "E10",
+      "rule_ids": [
+        "R05"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "一个人遭灾，就足以证明他或其血脉本来有罪。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "同时混淆苦难与罪责、承负与血脉原罪。"
+    },
+    {
+      "id": "E11",
+      "rule_ids": [
+        "R06"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "凭帝网调动的长期高位法威依赖供养及其回路。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "对象与条件均限定在帝网承托的法威。"
+    },
+    {
+      "id": "E12",
+      "rule_ids": [
+        "R06"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "所有修士每次施法都必须先获现场公投许可。",
+      "expected_assessment": "needs_evidence",
+      "rationale": "供养依赖不能推出普遍的现场许可制度。"
+    },
+    {
+      "id": "E13",
+      "rule_ids": [
+        "R07"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "边陲的帝网覆盖可以较弱，不能因此认定完全脱网。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "区分覆盖程度与是否处于网中。"
+    },
+    {
+      "id": "E14",
+      "rule_ids": [
+        "R07"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "凡属边陲，就必定完全位于帝网之外。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "将边陲直接等同网外。"
+    },
+    {
+      "id": "E15",
+      "rule_ids": [
+        "R08"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "神裔重数记录出生位格，实际修为须另行记载。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "没有将位格替换成修炼等级。"
+    },
+    {
+      "id": "E16",
+      "rule_ids": [
+        "R08"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "重数就是修炼等级，苦修会自动升重。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "直接违背重数属于出生位格的区分。"
+    },
+    {
+      "id": "E17",
+      "rule_ids": [
+        "R09"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "同胞重数可以不同，不能按每代固定降一重推算。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "保留个体差异，未套用机械代际公式。"
+    },
+    {
+      "id": "E18",
+      "rule_ids": [
+        "R09"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "神裔一旦返祖，出生重数就必然提高。",
+      "expected_assessment": "conflicts_with_selected_rule",
+      "rationale": "返祖不等于提高出生重数。"
+    },
+    {
+      "id": "E19",
+      "rule_ids": [
+        "R10"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "借印受收印制约，自凝真名不受同一文书除名机制拘束。",
+      "expected_assessment": "compatible_with_selected_rule",
+      "rationale": "保留两种力量依赖的区别。"
+    },
+    {
+      "id": "E20",
+      "rule_ids": [
+        "R10"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "world_fact",
+      "text": "拥有真名便免疫一切攻击。",
+      "expected_assessment": "needs_evidence",
+      "rationale": "不受文书除名不能推出全面免疫，须核查实质攻击机制。"
+    },
+    {
+      "id": "E21",
+      "rule_ids": [
+        "R03"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [
+        "N01"
+      ],
+      "statement_type": "character_claim",
+      "text": "人物宣称：“这件器物能无代价消业。”",
+      "expected_assessment": "needs_evidence",
+      "rationale": "可记录人物主张；声称的实际功能仍须核查，不能仅凭措辞判冲突。"
+    },
+    {
+      "id": "E22",
+      "rule_ids": [
+        "R04"
+      ],
+      "pending_conflict_ids": [],
+      "interpretation_note_ids": [],
+      "statement_type": "hypothesis",
+      "text": "假设一种新术通过归还、修补缓解失衡，但尚无机制依据。",
+      "expected_assessment": "needs_evidence",
+      "rationale": "方向相容不证明新术成立，仍需具体机制与代价依据。"
+    },
+    {
+      "id": "E23",
+      "rule_ids": [],
+      "pending_conflict_ids": [
+        "C01"
+      ],
+      "interpretation_note_ids": [],
+      "statement_type": "comparison",
+      "text": "根规则的七名是否为详细九境的简写？",
+      "expected_assessment": "pending_resolution",
+      "rationale": "简写还是过期表述尚待核定。"
+    },
+    {
+      "id": "E24",
+      "rule_ids": [],
+      "pending_conflict_ids": [
+        "C02"
+      ],
+      "interpretation_note_ids": [],
+      "statement_type": "comparison",
+      "text": "大乘段并举主神，与真名者可抗衡大乘，分别采用什么比较边界？",
+      "expected_assessment": "pending_resolution",
+      "rationale": "须核定境界归属与对抗条件，不能自动将抗衡解释为同境。"
+    },
+    {
+      "id": "E25",
+      "rule_ids": [
+        "R08",
+        "R09"
+      ],
+      "pending_conflict_ids": [
+        "C03"
+      ],
+      "interpretation_note_ids": [],
+      "statement_type": "comparison",
+      "text": "位序愈深、神光愈炽的表述，如何限定其与修为及返祖表现的关系？",
+      "expected_assessment": "pending_resolution",
+      "rationale": "表现关系仍待核定；出生位格不等于修为、返祖不等于升重的明文仍有效。"
+    }
+  ]
+}
