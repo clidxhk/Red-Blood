@@ -42,6 +42,12 @@ SKIP_DIRS = {
     "scripts", ".workbench", "__pycache__", ".git",
 }
 
+# Top-level scene planning cards are reviewed as inputs to the four-stage
+# pipeline, not as canonical world entries. They may cite formal files, but
+# must not become formal cross-reference targets themselves.
+PLANNING_DIRS = {"场景"}
+PLANNING_LINK_SKIP_DIRS = {"模板"}
+
 # Filenames (exact) to exclude from the target-name set
 SKIP_FILES = {
     "AGENTS.md", "CLAUDE.md", "MEMORY.md", "README.md",
@@ -105,7 +111,7 @@ def check_selected_links(root: Path, requested: list[str]) -> int:
             resolved = candidate.resolve()
             if not resolved.is_relative_to(root):
                 raise ValueError(f"检查路径越出项目：{name}")
-            if is_content_file(candidate, root):
+            if is_link_checkable_file(candidate, root):
                 selected.add(candidate)
     if not selected:
         raise ValueError("所选范围没有可检查的设定 Markdown 文件")
@@ -130,7 +136,9 @@ def escape_regex(name: str) -> str:
 
 def should_skip_dir(parts: tuple[str, ...]) -> bool:
     """Return True if any part of the path is a skip directory."""
-    return bool(set(parts) & SKIP_DIRS)
+    return bool(set(parts) & SKIP_DIRS) or (
+        bool(parts) and parts[0].casefold() in {name.casefold() for name in PLANNING_DIRS}
+    )
 
 
 def should_skip_target(name: str) -> bool:
@@ -153,6 +161,35 @@ def is_content_file(path: Path, root: Path) -> bool:
         return False
     return all(not should_skip_dir(p.parts) and not should_skip_target(p.name)
                for p in (declared, resolved))
+
+
+def is_link_checkable_file(path: Path, root: Path) -> bool:
+    """Allow explicit link checks of planning cards without indexing them as formal targets."""
+    if not path.is_file() or path.suffix != ".md":
+        return False
+    try:
+        declared = path.relative_to(root)
+        resolved = path.resolve().relative_to(root.resolve())
+    except ValueError:
+        return False
+    if should_skip_target(declared.name) or should_skip_target(resolved.name):
+        return False
+    for candidate in (declared, resolved):
+        parts = candidate.parts
+        if not parts:
+            return False
+        if set(parts) & (SKIP_DIRS - PLANNING_DIRS):
+            return False
+        if any(part.startswith(".") for part in parts):
+            return False
+        if (parts[0].casefold() in {name.casefold() for name in PLANNING_DIRS}
+                and len(parts) > 1
+                and parts[1].casefold() in {name.casefold() for name in PLANNING_LINK_SKIP_DIRS}):
+            return False
+    return is_content_file(path, root) or (
+        declared.parts[0].casefold() in {name.casefold() for name in PLANNING_DIRS}
+        and resolved.parts[0].casefold() in {name.casefold() for name in PLANNING_DIRS}
+    )
 
 
 def collect_targets(root: Path, min_length: int) -> dict[str, Path]:

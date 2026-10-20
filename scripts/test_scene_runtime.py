@@ -271,7 +271,7 @@ class SceneRuntimeTests(unittest.TestCase):
             Scene(self.manifest, self.root)
 
     def test_formal_targets_reject_management_root_and_working_paths(self):
-        rejected = ["README.md", "MEMORY.md", "CLAUDE.md", "AGENTS.md", "root-prose.md", "stories/README.md", "stories/nested/readme.MD", "stories/MEMORY.md", "stories/CLAUDE.md", "stories/AGENTS.md", "scripts/prose.md", ".workbench/runs/prose.md", "stories/.private/prose.md"]
+        rejected = ["README.md", "MEMORY.md", "CLAUDE.md", "AGENTS.md", "root-prose.md", "stories/README.md", "stories/nested/readme.MD", "stories/MEMORY.md", "stories/CLAUDE.md", "stories/AGENTS.md", "scripts/prose.md", "场景/策划卡.md", ".workbench/runs/prose.md", "stories/.private/prose.md"]
         for target in rejected:
             with self.subTest(target=target):
                 data = copy.deepcopy(self.manifest)
@@ -283,7 +283,7 @@ class SceneRuntimeTests(unittest.TestCase):
 
     def test_accepted_final_source_rejects_management_root_and_working_paths(self):
         self.accepted()
-        rejected = ["README.md", "MEMORY.md", "CLAUDE.md", "AGENTS.md", "root-prose.md", "stories/README.md", "stories/nested/readme.MD", "stories/MEMORY.md", "stories/CLAUDE.md", "stories/AGENTS.md", "scripts/prose.md", ".workbench/runs/prose.md", "stories/.private/prose.md"]
+        rejected = ["README.md", "MEMORY.md", "CLAUDE.md", "AGENTS.md", "root-prose.md", "stories/README.md", "stories/nested/readme.MD", "stories/MEMORY.md", "stories/CLAUDE.md", "stories/AGENTS.md", "scripts/prose.md", "场景/策划卡.md", ".workbench/runs/prose.md", "stories/.private/prose.md"]
         for final_path in rejected:
             with self.subTest(final_path=final_path):
                 self.write(final_path, "This is not formal prose\n")

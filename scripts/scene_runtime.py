@@ -25,6 +25,7 @@ REVIEWS = {"tone", "crosslink", "character", "worldbuilding"}
 OPAQUE = re.compile(r"[0-9a-f]{16,64}\Z")
 IDENTIFIER = re.compile(r"[A-Za-z0-9_-]{1,80}\Z")
 MANAGEMENT_FILES = {"agents.md", "claude.md", "memory.md", "readme.md"}
+NON_FORMAL_ROOTS = {"scripts", "场景"}
 
 
 class SceneError(ValueError):
@@ -101,7 +102,7 @@ def formal_content_path(root, relative, must_exist=False):
     for candidate in (Path(relative), path.resolve().relative_to(root)):
         require(len(candidate.parts) >= 2 and candidate.suffix.lower() == ".md"
                 and candidate.name.casefold() not in MANAGEMENT_FILES
-                and candidate.parts[0].casefold() != "scripts"
+                and candidate.parts[0].casefold() not in NON_FORMAL_ROOTS
                 and not any(part.startswith(".") for part in candidate.parts),
                 "Path must be a formal Markdown content file in a content directory")
     return path

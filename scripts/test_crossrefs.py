@@ -50,6 +50,21 @@ class LinkTargetTests(unittest.TestCase):
             self.assertEqual(checker.check_selected_links(self.root, ["."]), 0)
         self.assertIn("1 个文件", output.getvalue())
 
+    def test_scene_planning_cards_are_not_formal_targets_but_can_be_link_checked(self):
+        self.write("世界/背景/正式.md")
+        card = self.write("场景/茶馆/策划卡.md", "[[正式]]\n[[不存在]]")
+        template = self.write("场景/模板/场景卡模板.md", "[[目标正文]] [[地点条目]]")
+        self.assertNotIn("策划卡", checker.collect_link_targets(self.root))
+        self.assertNotIn("策划卡", checker.collect_targets(self.root, 1))
+        self.assertFalse(checker.is_content_file(card, self.root))
+        self.assertTrue(checker.is_link_checkable_file(card, self.root))
+        self.assertFalse(checker.is_link_checkable_file(template, self.root))
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            status = checker.check_selected_links(self.root, ["场景"])
+        self.assertEqual(status, 1)
+        self.assertIn("策划卡.md:2", output.getvalue())
+        self.assertIn("[[不存在]]", output.getvalue())
+
     def test_scoped_check_reports_missing_links_and_nonzero_status(self):
         self.write("世界/背景/正常.md")
         self.write("故事/选中.md", "[[正常]]\n[[失效]]")
