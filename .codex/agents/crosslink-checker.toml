@@ -106,7 +106,7 @@ developer_instructions = """
 
 ## 场景运行层与检查工具
 
-按 `scripts/scene_runtime/README.md` 核对来源路径、行段、哈希和正式正文回填位置。运行资料使用普通路径或 Markdown 链接；`.workbench/` 与 `scripts/` 不进入世界观双链目标和正式内容扫描。
+普通场景核对依据表中的必要来源与正式回填位置，不把缺少场景卡、哈希、预演报告或运行清单列为问题。启用运行工具时才按 `scripts/scene_runtime/README.md` 完整核对来源路径、行段、哈希与正式来源边界。运行资料使用普通路径或 Markdown 链接；`.workbench/`、`scripts/` 与场景策划卡不进入世界观正式双链目标。
 
 可运行 `scripts/check_crossrefs.py --check-links <内容文件或目录>` 只读检查双链目标、单字名称及同名歧义；原裸词模式用于辅助发现漏链。程序不能判断全部语义漏引、时间线与人物知情；禁止审校时运行 `--fix`。
 
