@@ -7,42 +7,42 @@
   "sources": [
     {
       "id": "S01",
-      "path": "背景/AGENTS.md",
-      "sha256": "f103ac4236a44ef3a699779a51ed00866643254598d63f14b6a25efb0cb104c6"
+      "path": "世界/背景/AGENTS.md",
+      "sha256": "0029955964fe9bf944f6129d18aedb1c6a0ba49f42e2abbbc4b997343a4cb8cf"
     },
     {
       "id": "S02",
-      "path": "背景/业.md",
+      "path": "世界/背景/业.md",
       "sha256": "da0ba625d8aa02e98ac787b97e21efc162807f9d9c7799093080e31b81673bbf"
     },
     {
       "id": "S03",
-      "path": "背景/帝网.md",
+      "path": "世界/背景/帝网.md",
       "sha256": "6333b3061193ae51d2922a8b734601e62416f64a7922af19de734ba1308c416e"
     },
     {
       "id": "S04",
-      "path": "势力/神族/传说/神裔.md",
+      "path": "世界/势力/神族/传说/神裔.md",
       "sha256": "daa7f7c217d1851f93b0ec36b2bcc7ffd77485d08cae45198104372ac5d359d7"
     },
     {
       "id": "S05",
-      "path": "势力/神族/传说/神敕与真名.md",
+      "path": "世界/势力/神族/传说/神敕与真名.md",
       "sha256": "5b06c0d2c1ac0124ef9590b48af54c02a02ebbe1af46a4bc7c4f849af9731f43"
     },
     {
       "id": "S06",
       "path": "AGENTS.md",
-      "sha256": "af2ed7db40b876878e4cb455fd847df32a9188e85df9ae39d684092b7410c480"
+      "sha256": "144bc44574b34ca5706407800d28d5561c24a617001c50e190876fb72378dc8a"
     },
     {
       "id": "S07",
-      "path": "背景/修士境界.md",
+      "path": "世界/背景/修士境界.md",
       "sha256": "b1ed82cc94ddb766cc815165ee581bf468e382e5dbb0a6c150ab2578b70a0414"
     },
     {
       "id": "S08",
-      "path": "背景/九州与神族之别.md",
+      "path": "世界/背景/九州与神族之别.md",
       "sha256": "a4cd5695fbde309c3ab24d1e8eeb8de167b19222f58eff961b46df570e4579bd"
     }
   ],

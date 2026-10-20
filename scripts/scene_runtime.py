@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 import re
+import shutil
 import sys
 import tempfile
 
@@ -402,8 +403,24 @@ def write_output(text, output, root, source_paths=(), temp_output_dir=None):
             stream.write(text)
             stream.flush()
             os.fsync(stream.fileno())
-        # Hard-link publication is atomic and cannot replace an existing file.
-        os.link(staging, path)
+        # Prefer an atomic hard-link publication. Some Windows sandboxes deny
+        # cross-file links even inside the workspace, so fall back to an
+        # exclusive, fsynced copy that still refuses to replace an existing file.
+        try:
+            os.link(staging, path)
+        except OSError:
+            if path.exists():
+                raise
+            flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+            descriptor = os.open(path, flags)
+            try:
+                with open(staging, "rb") as source, os.fdopen(descriptor, "wb", closefd=True) as destination:
+                    shutil.copyfileobj(source, destination)
+                    destination.flush()
+                    os.fsync(destination.fileno())
+            except BaseException:
+                path.unlink(missing_ok=True)
+                raise
     finally:
         if staging is not None:
             staging.unlink(missing_ok=True)

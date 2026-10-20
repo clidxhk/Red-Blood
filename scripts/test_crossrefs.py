@@ -24,7 +24,7 @@ class LinkTargetTests(unittest.TestCase):
         return path
 
     def test_exact_names_include_single_character_and_punctuation(self):
-        self.write("背景/业.md")
+        self.write("世界/背景/业.md")
         self.write("故事/11.茶馆闲聊·火楼.md")
         source = self.write("故事/测试.md", "[[业]] [[11.茶馆闲聊·火楼]]\n[[11. 茶馆闲聊·火楼]]\n[[]]")
         errors = checker.check_link_targets(source, self.root, checker.collect_link_targets(self.root))
@@ -42,7 +42,7 @@ class LinkTargetTests(unittest.TestCase):
     def test_workbench_is_excluded_from_both_target_indexes_and_scan(self):
         self.write(".workbench/runs/隐藏草稿.md", "[[不存在]]")
         self.write("scripts/scene_runtime/PLAN.md", "[[不存在]]")
-        self.write("背景/正式.md", "正文")
+        self.write("世界/背景/正式.md", "正文")
         self.assertNotIn("隐藏草稿", checker.collect_link_targets(self.root))
         self.assertNotIn("隐藏草稿", checker.collect_targets(self.root, 1))
         self.assertNotIn("PLAN", checker.collect_link_targets(self.root))
@@ -51,7 +51,7 @@ class LinkTargetTests(unittest.TestCase):
         self.assertIn("1 个文件", output.getvalue())
 
     def test_scoped_check_reports_missing_links_and_nonzero_status(self):
-        self.write("背景/正常.md")
+        self.write("世界/背景/正常.md")
         self.write("故事/选中.md", "[[正常]]\n[[失效]]")
         self.write("故事/未选.md", "[[另一个失效]]")
         with contextlib.redirect_stdout(io.StringIO()) as output:

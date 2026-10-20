@@ -150,6 +150,32 @@ class SceneRuntimeTests(unittest.TestCase):
             self.assertEqual(package["rules"][0]["text"], "ROOT FULL RULE\nSecond rule line\n")
         self.assertIn("RAW_SECRET_TRUTH", Scene(self.manifest, self.root).build("director"))
 
+    def test_world_background_layout_preserves_rules_and_accepted_provenance(self):
+        world_rules = "世界目录规则全文\n世界目录第二条\n"
+        background_rules = "背景类别规则全文\n背景类别第二条\n"
+        self.write("世界/AGENTS.md", world_rules)
+        self.write("世界/背景/AGENTS.md", background_rules)
+        final_path = "世界/背景/已审定正文.md"
+        self.write(final_path, "已审定的背景正文\n")
+        self.manifest["scene"]["target_paths"] = ["世界/背景/新设定.md"]
+        self.accepted()
+        self.manifest["sources"][-1] = self.source(FINAL, final_path, ["writer"])
+        scene = Scene(self.manifest, self.root)
+        expected_rules = {
+            "AGENTS.md": "ROOT FULL RULE\nSecond rule line\n",
+            "世界/AGENTS.md": world_rules,
+            "世界/背景/AGENTS.md": background_rules,
+        }
+        for audience in ("director", "writer"):
+            with self.subTest(audience=audience):
+                package = json.loads(scene.build(audience))
+                self.assertEqual({r["path"]: r["text"] for r in package["rules"]}, expected_rules)
+                final_source = next(s for s in package["sources"] if s["id"] == FINAL)
+                self.assertEqual(final_source["path"], final_path)
+                self.assertEqual(final_source["text"], "已审定的背景正文\n")
+                self.assertEqual(package["events"][0]["status"], "accepted")
+                self.assertEqual(package["events"][0]["final_source"], FINAL)
+
     def test_budget_counts_complete_serialized_characters_and_never_truncates(self):
         text = Scene(self.manifest, self.root).build("director")
         self.assertEqual(json.loads(text)["budget"]["used"], len(text))
