@@ -31,7 +31,7 @@
 | --- | --- |
 | `scripts/scene_runtime.py` | 验证数据、组装输入包、创建分支 |
 | `scripts/scene_runtime/README.md` | 协议、命令与能力边界 |
-| `scripts/scene_runtime/examples/teahouse-replay.json` | 可追溯的已完回目回放输入 |
+| `场景/茶馆闲聊/第一回开场/scene.json` | 可追溯的已完回目回放输入 |
 | `scripts/test_scene_runtime.py` | 运行层拒绝条件与正常路径测试 |
 | `scripts/test_crossrefs.py` | 双链目标、重名及运行目录排除测试 |
 | `.workbench/runs/` | 本地生成包与分支，不入 Git 或正式内容索引 |
@@ -99,7 +99,7 @@
 
 已新增根目录 `场景/`，把“某一次具体场面如何准备”从正式设定与运行清单之间单列出来。该层保存场景卡、模板和回放示例，记录时点、地点入口、人物槽位、戏剧问题、披露边界、连续性回填项与依据缺口；长期地点正文、人物底谱、时间线和正式正文继续留在原目录。
 
-`场景/` 被排除在正式双链目标集合与运行工具的正式正文来源之外，因此策划卡不会被误认成世界条目或 `accepted.final_source`。单张卡仍可做双链目标检查。首批只提供一张已审定第一回的回放卡，不新增剧情，也不代表真实新回目试用已经开始。
+`场景/` 被排除在正式双链目标集合与运行工具的正式正文来源之外，因此策划卡不会被误认成世界条目或 `accepted.final_source`。单张卡仍可做双链目标检查。首批提供通用与茶馆两份策划模板，以及第一回开场目录中的 `策划.md` 与 `scene.json` 配套回放，不新增剧情，也不代表真实新回目试用已经开始。
 
 ## 交付与维护
 
@@ -127,3 +127,11 @@
 首版明确未实现：自动语义检索、模型调用与轮次执行、事件状态自动重建、任意历史检查点恢复、全局分支图校验和 SillyTavern 格式导出。后续根据真实创作试用结果决定扩展。
 
 参考：[SillyTavern 世界书](https://docs.sillytavern.app/usage/core-concepts/worldinfo/)、[角色卡](https://docs.sillytavern.app/usage/core-concepts/characterdesign/)、[群聊](https://docs.sillytavern.app/usage/core-concepts/groupchats/)、[检查点](https://docs.sillytavern.app/usage/core-concepts/chatfilemanagement/#checkpoints)、[Codex 子代理](https://learn.chatgpt.com/docs/agent-configuration/subagents)。
+
+## 场景层按原计划补齐（2026-10-20）
+
+此前实现遗漏了茶馆专用模板，且示范卡与运行清单分处两地。本轮按已批准的四步计划补齐入口边界、两份模板及同目录示范；真实新回目试用仍作为后续阶段，不擅自立项新剧情。
+
+通用场次不强制八拍或双利害线，视点单列；茶馆模板按类别规范提示八部分的职责。旧工具示例清单迁入 `场景/茶馆闲聊/第一回开场/scene.json`，只保留一份权威清单。生成包不提交，由本地回放核对各受众材料。验证记录见同目录策划。
+
+本轮验证：37 项测试执行成功（其中 4 项因目录链接能力跳过）；迁移后清单 `validate` 通过；场景目录双链 0 错链或歧义。四包实际组装并核对来源、人物卡与事件边界，字符数为 31,595／27,323／667／605。语气、链接与一致性审校发现的问题已修正。

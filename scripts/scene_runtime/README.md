@@ -11,11 +11,12 @@
 在项目根目录运行，`python` 须指向可用的 Python 环境：
 
 ```powershell
-python scripts/scene_runtime.py validate scripts/scene_runtime/examples/teahouse-replay.json
-python scripts/scene_runtime.py build scripts/scene_runtime/examples/teahouse-replay.json --audience director --output .workbench/runs/replay-director.json
-python scripts/scene_runtime.py build scripts/scene_runtime/examples/teahouse-replay.json --audience writer --output .workbench/runs/replay-writer.json
-python scripts/scene_runtime.py build scripts/scene_runtime/examples/teahouse-replay.json --audience actor --actor laoshu --output .workbench/runs/replay-laoshu.json
-python scripts/scene_runtime.py fork scripts/scene_runtime/examples/teahouse-replay.json --branch-id alternative --output .workbench/runs/replay-alternative.json
+python scripts/scene_runtime.py validate 场景/茶馆闲聊/第一回开场/scene.json
+python scripts/scene_runtime.py build 场景/茶馆闲聊/第一回开场/scene.json --audience director --output .workbench/runs/replay-director.json
+python scripts/scene_runtime.py build 场景/茶馆闲聊/第一回开场/scene.json --audience writer --output .workbench/runs/replay-writer.json
+python scripts/scene_runtime.py build 场景/茶馆闲聊/第一回开场/scene.json --audience actor --actor laoshu --output .workbench/runs/replay-laoshu.json
+python scripts/scene_runtime.py build 场景/茶馆闲聊/第一回开场/scene.json --audience actor --actor shenxianggong --output .workbench/runs/replay-shenxianggong.json
+python scripts/scene_runtime.py fork 场景/茶馆闲聊/第一回开场/scene.json --branch-id alternative --output .workbench/runs/replay-alternative.json
 python -m unittest discover -s scripts -p "test_*.py" -v
 python scripts/check_crossrefs.py --check-links "故事/茶馆闲聊/灯下短论/1. 茶馆闲聊·英雄.md"
 ```
@@ -135,7 +136,7 @@ python scripts/check_crossrefs.py --check-links "故事/茶馆闲聊/灯下短�
 
 ## 回放与检查范围
 
-[回放样例](examples/teahouse-replay.json)仅选取第一回《谁可称英雄》的开场环境及两名人物的稳定语态，止于席间闲谈开始之前。原文文件名中的序号后有一个空格，清单按真实路径保存。
+[回放样例](../../场景/茶馆闲聊/第一回开场/scene.json)仅选取第一回《谁可称英雄》的开场环境及两名人物的稳定语态，止于席间闲谈开始之前。原文文件名中的序号后有一个空格，清单按真实路径保存。
 
 样例不使用人物当前境界和后来行历、不续写对白、不新增事件或宣称完成真实人物演出。老舒的恐惧明确标为心理材料，仅在本人 persona 中供导演查看；它不是已发生事实，`unknowns` 留空。全部正式原文保持不变。
 
