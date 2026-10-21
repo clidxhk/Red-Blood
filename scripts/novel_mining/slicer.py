@@ -1,114 +1,23 @@
-"""
-Chapter slicing and source registration module.
-Extracts chapters with stable character offsets into normalized text.
-"""
+"""Read selected text in memory; do not register sources or save progress."""
 
-import hashlib
-import re
-from datetime import datetime, timezone
 from pathlib import Path
-from typing import List, Tuple
+import re
 
-from .schema import SourceRecord, ChapterRecord
-from .db import MiningDatabase
-
-CHAPTER_PATTERN = re.compile(r"^\s*(第[0-9零一二三四五六七八九十百千万]+[章回节卷].*)$", re.MULTILINE)
+CHAPTER_PATTERN = re.compile(r"^[ \t]*(第[0-9零一二三四五六七八九十百千万]+[章回节卷].*)$", re.MULTILINE)
 
 
-class NovelSlicer:
-    def __init__(self, db: MiningDatabase, workdir: Path = None):
-        self.db = db
-        self.workdir = workdir or db.db_path.parent
-        if self.workdir.resolve() != db.db_path.parent.resolve():
-            raise ValueError("Normalized text must be stored beside the database")
-        self.workdir.mkdir(parents=True, exist_ok=True)
-
-    def register_and_slice(
-        self,
-        raw_path: Path,
-        source_id: str = "mushenji_v1",
-        title: str = "牧神记",
-        author: str = "宅猪",
-        version_tag: str = "校对版全本",
-        encoding: str = "gb18030",
-    ) -> Tuple[SourceRecord, List[ChapterRecord]]:
-        if not re.fullmatch(r"[A-Za-z0-9_-]+", source_id):
-            raise ValueError("source_id must contain only letters, digits, underscores or hyphens")
-        # 1. Read raw bytes and calculate sha256
-        with open(raw_path, "rb") as f:
-            raw_bytes = f.read()
-
-        raw_sha256 = hashlib.sha256(raw_bytes).hexdigest()
-        file_size = len(raw_bytes)
-        existing = self.db.get_source(source_id)
-        if existing:
-            raise ValueError("Source ID already registered; use a new ID for a new version")
-
-        # 2. Decode text
-        raw_text = raw_bytes.decode(encoding, errors="strict")
-
-        # 3. Normalize newlines to \n
-        normalized_text = raw_text.replace("\r\n", "\n").replace("\r", "\n")
-        normalized_bytes = normalized_text.encode("utf-8")
-        normalized_sha256 = hashlib.sha256(normalized_bytes).hexdigest()
-
-        # 4. Find all chapter boundaries
-        matches = list(CHAPTER_PATTERN.finditer(normalized_text))
-        total_chapters = len(matches)
-        if not matches:
-            raise ValueError("No supported chapter headings found; manual slicing review required")
-        normalized_file_path = self.workdir / f"{source_id}_normalized.txt"
-        with open(normalized_file_path, "w", encoding="utf-8", newline="\n") as f:
-            f.write(normalized_text)
-
-        chapters: List[ChapterRecord] = []
-        for i, match in enumerate(matches):
-            chapter_index = i + 1
-            raw_title = match.group(1).strip()
-            start_char = match.start()
-            end_char = matches[i + 1].start() if i + 1 < len(matches) else len(normalized_text)
-
-            chapter_text = normalized_text[start_char:end_char]
-            char_count = len(chapter_text)
-            chapter_sha256 = hashlib.sha256(chapter_text.encode("utf-8")).hexdigest()
-
-            # Clean chapter title
-            clean_title = re.sub(r"^第[0-9零一二三四五六七八九十百千万]+[章回节卷]\s*", "", raw_title)
-
-            chapter_id = f"{source_id}_c{chapter_index:04d}"
-            chapters.append(
-                ChapterRecord(
-                    chapter_id=chapter_id,
-                    source_id=source_id,
-                    chapter_index=chapter_index,
-                    raw_title=raw_title,
-                    normalized_title=clean_title,
-                    start_char=start_char,
-                    end_char=end_char,
-                    char_count=char_count,
-                    sha256=chapter_sha256,
-                    status="pending",
-                )
-            )
-
-        now_str = datetime.now(timezone.utc).isoformat()
-        source = SourceRecord(
-            source_id=source_id,
-            title=title,
-            author=author,
-            version_tag=version_tag,
-            file_path=str(raw_path.resolve()),
-            sha256=raw_sha256,
-            file_size=file_size,
-            encoding=encoding,
-            normalized_sha256=normalized_sha256,
-            total_chars=len(normalized_text),
-            total_chapters=total_chapters,
-            created_at=now_str,
-        )
-
-        # Persist to database
-        self.db.save_source(source)
-        self.db.save_chapters(chapters)
-
-        return source, chapters
+def read_text(path, encoding="utf-8-sig", chapters=None):
+    text = Path(path).read_bytes().decode(encoding, errors="strict")
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    if chapters is None:
+        return text
+    selection = re.fullmatch(r"([1-9]\d*)(?:-([1-9]\d*))?", chapters)
+    if not selection:
+        raise ValueError("chapters must be a positive index or inclusive range, e.g. 1-3")
+    start = int(selection[1])
+    end = int(selection[2] or selection[1])
+    headings = list(CHAPTER_PATTERN.finditer(text))
+    if not 1 <= start <= end <= len(headings):
+        raise ValueError("Chapter range unavailable; read the original text and check its headings")
+    stop = headings[end].start() if end < len(headings) else len(text)
+    return text[headings[start - 1].start():stop]

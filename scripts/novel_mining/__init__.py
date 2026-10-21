@@ -1,22 +1,6 @@
-"""
-Novel mining package.
-"""
+"""Stateless text reading and evidence checks for worldbuilding research."""
 
-from .schema import SourceRecord, ChapterRecord, MentionRecord, ClaimRecord, EntityRecord, CandidateRecord
-from .db import MiningDatabase
-from .slicer import NovelSlicer
-from .extractor import ChapterExtractor
-from .evaluator import CandidateEvaluator
+from .extractor import validate_claims
+from .slicer import read_text
 
-__all__ = [
-    "SourceRecord",
-    "ChapterRecord",
-    "MentionRecord",
-    "ClaimRecord",
-    "EntityRecord",
-    "CandidateRecord",
-    "MiningDatabase",
-    "NovelSlicer",
-    "ChapterExtractor",
-    "CandidateEvaluator",
-]
+__all__ = ["read_text", "validate_claims"]
