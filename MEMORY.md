@@ -23,6 +23,7 @@
 
 ## 命名与原型
 
+- [Concise Setting Names](.memory/命名与原型/concise-setting-names.md) — 文件名与条目名简短顺口，优先已有通称，不把多组修饰串成长名；改名同步引用
 - [Xuanhuan Lexicon Preference](.memory/命名与原型/xuanhuan-lexicon.md) — 借鉴现实原型时须彻底转译为古典仙侠话语，严禁保留现代专名或现实历史称谓
 - [Reference Archetypes First](.memory/命名与原型/reference-archetypes.md) — 核心法理与神异机制优先溯源佛道典籍、经典文献与世界神话，完成世界内原生化转译
 - [Doctrine Formation And Archetype Honesty](.memory/命名与原型/doctrine-formation-archetype-honesty.md) — 思想演进须体现为时代演变自然成型；如实转译哲学内核，严禁流于臆想美化
