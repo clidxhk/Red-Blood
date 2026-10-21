@@ -5,6 +5,7 @@ Location: .workbench/novel_mining/mining.db
 
 import json
 import sqlite3
+from contextlib import contextmanager
 from pathlib import Path
 from typing import List, Optional, Dict, Any
 
@@ -26,10 +27,15 @@ class MiningDatabase:
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         self._init_db()
 
-    def _get_connection(self) -> sqlite3.Connection:
+    @contextmanager
+    def _get_connection(self):
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
-        return conn
+        try:
+            with conn:
+                yield conn
+        finally:
+            conn.close()
 
     def _init_db(self):
         with self._get_connection() as conn:
@@ -123,7 +129,32 @@ class MiningDatabase:
                 FOREIGN KEY (entity_id) REFERENCES entities (entity_id)
             )
             """)
+            # Legacy data used fabricated offsets/snippets: keep it, but never
+            # inherit its unsubstantiated verified status.
+            additions = {
+                "claims": {"evidence_start": "INTEGER", "evidence_end": "INTEGER",
+                           "chapter_sha256": "TEXT DEFAULT ''", "status": "TEXT DEFAULT 'needs_review'",
+                           "reviewer": "TEXT DEFAULT ''", "review_note": "TEXT DEFAULT ''"},
+                "entities": {"source_id": "TEXT DEFAULT ''"},
+            }
+            for table, columns in additions.items():
+                existing = {row[1] for row in cur.execute(f"PRAGMA table_info({table})")}
+                for name, definition in columns.items():
+                    if name not in existing:
+                        cur.execute(f"ALTER TABLE {table} ADD COLUMN {name} {definition}")
+            cur.execute("UPDATE entities SET status='needs_review' WHERE source_id='' OR source_id IS NULL")
             conn.commit()
+
+    def get_source(self, source_id: str):
+        with self._get_connection() as conn:
+            row = conn.execute("SELECT * FROM sources WHERE source_id=?", (source_id,)).fetchone()
+            return dict(row) if row else None
+
+    def get_claims(self, source_id: str):
+        with self._get_connection() as conn:
+            return [dict(r) for r in conn.execute(
+                "SELECT cl.* FROM claims cl JOIN chapters ch USING(chapter_id) "
+                "WHERE ch.source_id=? ORDER BY cl.claim_id", (source_id,))]
 
     def save_source(self, s: SourceRecord):
         with self._get_connection() as conn:
@@ -172,12 +203,14 @@ class MiningDatabase:
             conn.executemany("""
             INSERT OR REPLACE INTO claims (
                 claim_id, task_id, chapter_id, target_name, category, attribute,
-                value, claim_type, conditions, speaker, evidence_snippet
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                value, claim_type, conditions, speaker, evidence_snippet,
+                evidence_start, evidence_end, chapter_sha256, status, reviewer, review_note
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, [
                 (
                     c.claim_id, c.task_id, c.chapter_id, c.target_name, c.category, c.attribute,
-                    c.value, c.claim_type, c.conditions, c.speaker, c.evidence_snippet
+                    c.value, c.claim_type, c.conditions, c.speaker, c.evidence_snippet,
+                    c.evidence_start, c.evidence_end, c.chapter_sha256, c.status, c.reviewer, c.review_note
                 )
                 for c in claims
             ])
@@ -187,15 +220,15 @@ class MiningDatabase:
             conn.executemany("""
             INSERT OR REPLACE INTO entities (
                 entity_id, canonical_name, category, aliases_json, claims_json,
-                chapter_ids_json, status
-            ) VALUES (?, ?, ?, ?, ?, ?, ?)
+                chapter_ids_json, status, source_id
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """, [
                 (
                     e.entity_id, e.canonical_name, e.category,
                     json.dumps(e.aliases, ensure_ascii=False),
                     json.dumps(e.claims, ensure_ascii=False),
                     json.dumps(e.chapter_ids, ensure_ascii=False),
-                    e.status
+                    e.status, e.source_id
                 )
                 for e in entities
             ])
@@ -231,10 +264,13 @@ class MiningDatabase:
             cur.execute("SELECT * FROM mentions WHERE chapter_id = ?", (chapter_id,))
             return [dict(r) for r in cur.fetchall()]
 
-    def get_all_entities(self) -> List[Dict[str, Any]]:
+    def get_all_entities(self, source_id=None) -> List[Dict[str, Any]]:
         with self._get_connection() as conn:
             cur = conn.cursor()
-            cur.execute("SELECT * FROM entities ORDER BY category, canonical_name")
+            if source_id is None:
+                cur.execute("SELECT * FROM entities ORDER BY category, canonical_name")
+            else:
+                cur.execute("SELECT * FROM entities WHERE source_id=? ORDER BY category, canonical_name", (source_id,))
             rows = []
             for r in cur.fetchall():
                 d = dict(r)
@@ -244,10 +280,14 @@ class MiningDatabase:
                 rows.append(d)
             return rows
 
-    def get_all_candidates(self) -> List[Dict[str, Any]]:
+    def get_all_candidates(self, source_id=None) -> List[Dict[str, Any]]:
         with self._get_connection() as conn:
             cur = conn.cursor()
-            cur.execute("SELECT * FROM candidates ORDER BY destination, category")
+            if source_id is None:
+                cur.execute("SELECT * FROM candidates ORDER BY destination, category")
+            else:
+                cur.execute("SELECT ca.* FROM candidates ca JOIN entities e USING(entity_id) "
+                            "WHERE e.source_id=? AND e.status='verified' ORDER BY ca.destination, ca.category", (source_id,))
             rows = []
             for r in cur.fetchall():
                 d = dict(r)

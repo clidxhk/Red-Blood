@@ -8,6 +8,7 @@ from typing import List, Dict, Any
 
 from .schema import CandidateRecord
 from .db import MiningDatabase
+from .extractor import ChapterExtractor
 
 # Evaluation mapping for Mushenji entities to Red-Blood universe
 EVALUATION_SPECS = [
@@ -213,14 +214,28 @@ class CandidateEvaluator:
     def __init__(self, db: MiningDatabase):
         self.db = db
 
-    def evaluate_candidates(self) -> List[CandidateRecord]:
-        entities = self.db.get_all_entities()
-        entity_dict = {e["canonical_name"]: e for e in entities}
+    def evaluate_candidates(self, source_id: str = "mushenji_v1") -> List[CandidateRecord]:
+        extractor = ChapterExtractor(self.db)
+        extractor.rebuild_entities(source_id)
+        entities = self.db.get_all_entities(source_id)
+        # Templates are proposals, not evidence or automatic world-rule checks.
+        # Revalidate source hashes at use time, even after semantic approval.
+        eligible = []
+        for entity in entities:
+            if entity["status"] != "verified" or not entity["claims"]:
+                continue
+            for claim in entity["claims"]:
+                extractor.check_evidence(source_id, claim)
+                if not claim.get("reviewer") or not claim.get("review_note"):
+                    raise ValueError("Verified claim lacks a semantic review record")
+            eligible.append(entity)
+        entities = eligible
+        entity_dict = {(e["canonical_name"], e["category"]): e for e in entities}
 
         candidates: List[CandidateRecord] = []
         for spec in EVALUATION_SPECS:
             name = spec["name"]
-            ent = entity_dict.get(name)
+            ent = entity_dict.get((name, spec["category"]))
             if not ent:
                 continue
 
@@ -231,7 +246,7 @@ class CandidateEvaluator:
                 canonical_name=name,
                 category=spec["category"],
                 destination=spec["destination"],
-                reason=spec["reason"],
+                reason="[预设转化建议，未完成仓库检索与法理审校] " + spec["reason"],
                 target_spec_path=spec["target_spec_path"],
                 proposed_adaptation=spec["adaptation"],
             )

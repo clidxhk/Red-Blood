@@ -16,9 +16,11 @@ CHAPTER_PATTERN = re.compile(r"^\s*(第[0-9零一二三四五六七八九十百�
 
 
 class NovelSlicer:
-    def __init__(self, db: MiningDatabase, workdir: Path = Path(".workbench/novel_mining")):
+    def __init__(self, db: MiningDatabase, workdir: Path = None):
         self.db = db
-        self.workdir = workdir
+        self.workdir = workdir or db.db_path.parent
+        if self.workdir.resolve() != db.db_path.parent.resolve():
+            raise ValueError("Normalized text must be stored beside the database")
         self.workdir.mkdir(parents=True, exist_ok=True)
 
     def register_and_slice(
@@ -30,29 +32,34 @@ class NovelSlicer:
         version_tag: str = "校对版全本",
         encoding: str = "gb18030",
     ) -> Tuple[SourceRecord, List[ChapterRecord]]:
+        if not re.fullmatch(r"[A-Za-z0-9_-]+", source_id):
+            raise ValueError("source_id must contain only letters, digits, underscores or hyphens")
         # 1. Read raw bytes and calculate sha256
         with open(raw_path, "rb") as f:
             raw_bytes = f.read()
 
         raw_sha256 = hashlib.sha256(raw_bytes).hexdigest()
         file_size = len(raw_bytes)
+        existing = self.db.get_source(source_id)
+        if existing:
+            raise ValueError("Source ID already registered; use a new ID for a new version")
 
         # 2. Decode text
-        raw_text = raw_bytes.decode(encoding, errors="replace")
+        raw_text = raw_bytes.decode(encoding, errors="strict")
 
         # 3. Normalize newlines to \n
         normalized_text = raw_text.replace("\r\n", "\n").replace("\r", "\n")
         normalized_bytes = normalized_text.encode("utf-8")
         normalized_sha256 = hashlib.sha256(normalized_bytes).hexdigest()
 
-        # Save normalized text to workdir
-        normalized_file_path = self.workdir / f"{source_id}_normalized.txt"
-        with open(normalized_file_path, "w", encoding="utf-8") as f:
-            f.write(normalized_text)
-
         # 4. Find all chapter boundaries
         matches = list(CHAPTER_PATTERN.finditer(normalized_text))
         total_chapters = len(matches)
+        if not matches:
+            raise ValueError("No supported chapter headings found; manual slicing review required")
+        normalized_file_path = self.workdir / f"{source_id}_normalized.txt"
+        with open(normalized_file_path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(normalized_text)
 
         chapters: List[ChapterRecord] = []
         for i, match in enumerate(matches):

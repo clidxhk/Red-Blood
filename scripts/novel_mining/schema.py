@@ -62,6 +62,12 @@ class ClaimRecord:
     conditions: str
     speaker: Optional[str]
     evidence_snippet: str
+    evidence_start: Optional[int] = None
+    evidence_end: Optional[int] = None
+    chapter_sha256: str = ""
+    status: str = "needs_review"
+    reviewer: str = ""
+    review_note: str = ""
 
 
 @dataclass
@@ -72,7 +78,8 @@ class EntityRecord:
     aliases: List[str] = field(default_factory=list)
     claims: List[Dict[str, Any]] = field(default_factory=list)
     chapter_ids: List[str] = field(default_factory=list)
-    status: str = "verified"
+    status: str = "needs_review"
+    source_id: str = ""
 
 
 @dataclass
