@@ -29,6 +29,7 @@
 
 ## 协作工作流
 
+- [Creation Pipeline Scope](.memory/协作工作流/creation-pipeline-scope.md) — 日常任务由主代理直接完成；正式创作与明确的正式内容专项审校才调度管线子代理
 - [Workflow Git](.memory/协作工作流/workflow-git.md) — 每轮完工即时精确提交并汇报哈希；并行环境严禁批量暂存，严格防范中文路径假阴性
 - [Chinese UTF-8 Encoding](.memory/协作工作流/chinese-utf8-encoding.md) — 全流程中文输出与文件读写均须强制使用 UTF-8 编码，彻底杜绝乱码
 - [Image Script Workflow](.memory/协作工作流/image-script-workflow.md) — 图像生成与插图排版统一复用既定脚本流程，省去重复排查环境与参数调用
