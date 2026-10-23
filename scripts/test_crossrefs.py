@@ -50,6 +50,17 @@ class LinkTargetTests(unittest.TestCase):
             self.assertEqual(checker.check_selected_links(self.root, ["."]), 0)
         self.assertIn("1 个文件", output.getvalue())
 
+    def test_mining_records_dir_is_excluded_from_indexes_and_link_checks(self):
+        self.write("素材/牧神记/取材记录.md", "解牛刀 [[不存在]]")
+        self.write("世界/器物/九州/解牛刀.md", "正文")
+        self.assertNotIn("取材记录", checker.collect_link_targets(self.root))
+        self.assertNotIn("取材记录", checker.collect_targets(self.root, 1))
+        with self.assertRaises(ValueError):
+            checker.check_selected_links(self.root, ["素材/牧神记/取材记录.md"])
+        with contextlib.redirect_stdout(io.StringIO()) as output:
+            self.assertEqual(checker.check_selected_links(self.root, ["世界"]), 0)
+        self.assertIn("1 个文件", output.getvalue())
+
     def test_scene_planning_cards_are_not_formal_targets_but_can_be_link_checked(self):
         self.write("世界/背景/正式.md")
         card = self.write("场景/茶馆/策划卡.md", "[[正式]]\n[[不存在]]")

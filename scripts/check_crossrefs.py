@@ -40,6 +40,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SKIP_DIRS = {
     ".claude", ".codex", ".gemini", ".memory", ".obsidian",
     "scripts", ".workbench", "__pycache__", ".git",
+    # 取材记录与未采纳素材清单：非正式内容，不索引、不扫描、不作为双链目标
+    "素材",
 }
 
 # Top-level scene planning cards are reviewed as inputs to the four-stage
