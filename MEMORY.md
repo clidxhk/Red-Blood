@@ -1,7 +1,7 @@
 ## 文风与语言
 
 - [Authorial Voice & Meta Wording](.memory/文风与语言/style-meta-voice.md) — 严禁正文出现幕后构思说明与“被写成”等元写作腔调；交付说明严禁出现“仓库已有”等局外视角
-- [Avoid Catchphrase Repetition](.memory/文风与语言/avoid-catchphrase-repetition.md) — 严控口癖：垫字（后世/故而/论及/若说）、器官词（骨/脉/肉）、绝对化（最冷/最硬/最怕）、单字口癖（旧X造词/万能压动词）及保护例外清单与分级指标
+- [Avoid Catchphrase Repetition](.memory/文风与语言/avoid-catchphrase-repetition.md) — 口癖与AI味病灶三档管控（T1现形即改/T2聚集才改/T3密度超标才改）：新增对比抬升、升华断言、认知动词搬运等病灶与保护例外
 - [Style Variation Preference](.memory/文风与语言/style-variation.md) — 主动化裁句法与叙述气韵，防止多篇设定文档陷入高度同质化的模板腔调
 - [Proofread Clarity And Dedup](.memory/文风与语言/proofread-clarity-and-dedup.md) — 全面清理半白话、语病残句与设定漂移，确保前后因果自洽且表达畅达
 - [Cultivation Atmosphere Preference](.memory/文风与语言/cultivation-atmosphere.md) — 保持浓郁深沉的修仙意境，市井闲谈与民俗风物亦须自然渗透大荒修行秩序
