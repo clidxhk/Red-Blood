@@ -59,6 +59,7 @@ Git 在这里承担的是集体记忆骨架。
 - **按任务类型路由**：新建条目走 `research-agent → character-actor → style-writer → tone-checker → crosslink-checker → character-reviewer` 六环链路；茶馆回目额外插入 `teahouse-chronicler`；批量统稿追加 `worldbuilding-consistency`。
 - **审校不修改正文**：阶段三的四个审校 subagent 只出报告，修正由主架构师亲自执行，确保修改可追溯、不引入新噪音。
 - **并行与依赖**：`tone-checker` 和 `crosslink-checker` 可并行调用，`character-reviewer` 和 `worldbuilding-consistency` 可并行调用，但两组间有依赖顺序——前一组可能产生需要后一组重新检查的修正。
+- [创作管线流程图](./docs/pipeline-flow.html)：任务路由与四阶段管线的可视化总览，标注各阶段负责 subagent 与阶段交付物。
 
 ### 场景策划与运行层
 

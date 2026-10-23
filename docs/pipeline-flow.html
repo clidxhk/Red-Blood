@@ -1,0 +1,299 @@
+<meta charset="utf-8">
+<title>Red-Blood 创作管线</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    /* 布局：单栏文档，两幅横向 SVG 流程图置于可滚动容器 */
+    --bg: #f5f1e8; --panel: #fcfaf4; --fg: #2b261d; --muted: #857a63; --line: #ddd3bf;
+    --zhu: #a83e2b; --zhu-tint: rgba(168,62,43,.07);
+    --qing: #2e6f74; --qing-tint: rgba(46,111,116,.08);
+    --lv: #45714f; --lv-tint: rgba(69,113,79,.08);
+    --zhe: #96682a; --zhe-tint: rgba(150,104,42,.08);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171410; --panel: #201c16; --fg: #e9e1d1; --muted: #a1957d; --line: #3b3426;
+      --zhu: #d3705a; --zhu-tint: rgba(211,112,90,.13);
+      --qing: #5da7ac; --qing-tint: rgba(93,167,172,.12);
+      --lv: #7fae8a; --lv-tint: rgba(127,174,138,.12);
+      --zhe: #c49a5a; --zhe-tint: rgba(196,154,90,.12);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #171410; --panel: #201c16; --fg: #e9e1d1; --muted: #a1957d; --line: #3b3426;
+    --zhu: #d3705a; --zhu-tint: rgba(211,112,90,.13);
+    --qing: #5da7ac; --qing-tint: rgba(93,167,172,.12);
+    --lv: #7fae8a; --lv-tint: rgba(127,174,138,.12);
+    --zhe: #c49a5a; --zhe-tint: rgba(196,154,90,.12);
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font-family: 'Noto Sans SC', sans-serif; font-size: 14px; line-height: 1.75;
+    margin: 0; padding-block: 26px 48px;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .eyebrow { font-size: 11px; letter-spacing: .2em; color: var(--muted); margin: 0 0 6px; }
+  h1 { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: clamp(26px, 5vw, 34px);
+       line-height: 1.3; margin: 0 0 14px; text-wrap: balance; }
+  .lead { color: var(--muted); font-size: 14.5px; max-width: 42em; margin: 0 0 22px; }
+  .lead strong { color: var(--fg); font-weight: 500; }
+  h2 { font-family: 'Noto Serif SC', serif; font-size: 17px; font-weight: 700; margin: 34px 0 12px; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: 0 0 8px; padding: 0; list-style: none; }
+  .legend li { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted); }
+  .sw { width: 13px; height: 13px; border-radius: 3px; border: 1.5px solid; flex: none; }
+  .sw-zhu { border-color: var(--zhu); background: var(--zhu-tint); }
+  .sw-qing { border-color: var(--qing); background: var(--qing-tint); }
+  .sw-lv { border-color: var(--lv); background: var(--lv-tint); }
+  .sw-zhe { border-color: var(--zhe); background: var(--zhe-tint); }
+  .sw-dash { border-color: var(--muted); border-style: dashed; background: transparent; }
+  .sw-pill { border-color: var(--line); background: var(--panel); border-radius: 8px; width: 20px; }
+
+  figure { margin: 18px 0 8px; }
+  .fig-scroll { overflow-x: auto; }
+  .fig-scroll svg { display: block; width: 100%; min-width: 680px; height: auto; }
+  figcaption { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.7; }
+  figcaption b { color: var(--fg); font-weight: 500; }
+
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px 22px; margin-top: 4px; }
+  .rule { border-left: 2px solid var(--line); padding-left: 14px; }
+  .rule h3 { font-family: 'Noto Serif SC', serif; font-size: 14px; margin: 0 0 4px; }
+  .rule p { font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.75; }
+  .rl-zhu { border-color: var(--zhu); } .rl-qing { border-color: var(--qing); }
+  .rl-lv { border-color: var(--lv); } .rl-zhe { border-color: var(--zhe); }
+
+  footer { border-top: 1px solid var(--line); margin-top: 40px; padding-top: 14px;
+           font-size: 11.5px; color: var(--muted); }
+
+  /* —— SVG 通用样式 —— */
+  svg text { font-family: 'Noto Sans SC', sans-serif; }
+  .mid { text-anchor: middle; }
+  .t-h { font-family: 'Noto Serif SC', serif; font-weight: 700; font-size: 13px; fill: var(--fg); }
+  .t-name { font-family: 'JetBrains Mono', monospace; font-weight: 500; font-size: 13px; fill: var(--fg); }
+  .t-sub { font-size: 10.5px; fill: var(--muted); }
+  .t-note { font-size: 10px; fill: var(--muted); }
+  .bx { stroke-width: 1.5; }
+  .b-plain { stroke: var(--line); fill: var(--panel); }
+  .b-zhu { stroke: var(--zhu); fill: var(--zhu-tint); }
+  .b-qing { stroke: var(--qing); fill: var(--qing-tint); }
+  .b-lv { stroke: var(--lv); fill: var(--lv-tint); }
+  .b-zhe { stroke: var(--zhe); fill: var(--zhe-tint); }
+  .dash { stroke-dasharray: 5 4; }
+  .edge { stroke: var(--muted); stroke-width: 1.4; fill: none; }
+  .edge-qing { stroke: var(--qing); stroke-width: 1.3; fill: none; stroke-dasharray: 5 4; }
+  .edge-lv { stroke: var(--lv); stroke-width: 1.3; fill: none; stroke-dasharray: 5 4; }
+  .edge-zhe { stroke: var(--zhe); stroke-width: 1.3; fill: none; stroke-dasharray: 5 4; }
+  .pill-r { fill: var(--panel); stroke: var(--line); stroke-width: 1.2; }
+  .mk { fill: var(--muted); } .mk-q { fill: var(--qing); }
+  .mk-l { fill: var(--lv); } .mk-z { fill: var(--zhe); }
+</style>
+
+<header class="wrap">
+  <p class="eyebrow">RED-BLOOD · 主架构师调度框架</p>
+  <h1>创作管线全景图</h1>
+  <p class="lead">任务先经主架构师分诊：日常直办，不进管线；正式创作走「检索调研 → 正文撰写 → 适用审校 → 采纳交付」四阶段。调研与审校角色<strong>只出依据和报告</strong>，正文仅出自 <strong>style-writer</strong>，决断与落盘认主架构师。</p>
+</header>
+
+<main class="wrap">
+  <ul class="legend">
+    <li><span class="sw sw-zhu"></span>主架构师节点</li>
+    <li><span class="sw sw-qing"></span>调研角色</li>
+    <li><span class="sw sw-lv"></span>写作角色</li>
+    <li><span class="sw sw-zhe"></span>审校角色</li>
+    <li><span class="sw sw-dash"></span>虚线 = 按条件启用</li>
+    <li><span class="sw sw-pill"></span>药丸 = 阶段交付物</li>
+  </ul>
+
+  <figure>
+    <div class="fig-scroll">
+    <svg viewBox="0 0 880 372" role="img" aria-label="任务路由：主架构师将任务分为日常直办、正式创作管线与专项审校三条路径">
+      <defs>
+        <marker id="a1n" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" class="mk"/>
+        </marker>
+      </defs>
+      <rect x="380" y="16" width="120" height="40" rx="10" class="bx b-plain"/>
+      <text x="440" y="41" class="mid" style="font-size:12.5px;font-weight:500;fill:var(--fg)">用户任务</text>
+      <path d="M440 56L440 84" class="edge" marker-end="url(#a1n)"/>
+      <polygon points="440,88 560,136 440,184 320,136" class="bx b-zhu"/>
+      <text x="440" y="132" class="t-h mid">主架构师</text>
+      <text x="440" y="150" class="t-sub mid">判断任务类型</text>
+      <path d="M440 184L140 232" class="edge" marker-end="url(#a1n)"/>
+      <path d="M440 184L440 232" class="edge" marker-end="url(#a1n)"/>
+      <path d="M440 184L740 232" class="edge" marker-end="url(#a1n)"/>
+      <text x="268" y="201" class="t-note mid">不进管线</text>
+      <text x="450" y="214" class="t-note">进管线</text>
+      <text x="612" y="201" class="t-note mid">只审不写</text>
+
+      <rect x="10" y="236" width="260" height="100" rx="12" class="bx b-plain"/>
+      <text x="140" y="264" class="t-h mid">日常任务</text>
+      <text x="140" y="290" class="mid" style="font-size:11.5px;fill:var(--fg)">主代理直接处理</text>
+      <text x="140" y="312" class="t-sub mid">查询 · 分析 · 脚本 · Git</text>
+
+      <rect x="310" y="236" width="260" height="100" rx="12" class="bx b-plain"/>
+      <text x="440" y="264" class="t-h mid">正式创作</text>
+      <rect x="312" y="276" width="58" height="20" rx="5" class="bx b-qing"/>
+      <text x="341" y="290" class="t-note mid">一 · 调研</text>
+      <rect x="378" y="276" width="58" height="20" rx="5" class="bx b-lv"/>
+      <text x="407" y="290" class="t-note mid">二 · 撰写</text>
+      <rect x="444" y="276" width="58" height="20" rx="5" class="bx b-zhe"/>
+      <text x="473" y="290" class="t-note mid">三 · 审校</text>
+      <rect x="510" y="276" width="58" height="20" rx="5" class="bx b-zhu"/>
+      <text x="539" y="290" class="t-note mid">四 · 交付</text>
+      <text x="440" y="322" class="t-note mid">茶馆 +chronicler · 批量 +consistency</text>
+
+      <rect x="610" y="236" width="260" height="100" rx="12" class="bx b-zhe"/>
+      <text x="740" y="264" class="t-h mid">专项审校</text>
+      <text x="740" y="290" class="mid" style="font-size:11.5px;fill:var(--fg)">仅审校角色 · 只出报告</text>
+      <text x="740" y="312" class="t-sub mid">文风 · 双链 · 人物 · 跨文件</text>
+
+      <text x="440" y="362" class="t-sub mid">混合任务拆分后各走其道 · 用户指定委派时按指定范围执行</text>
+    </svg>
+    </div>
+    <figcaption><b>图一 · 任务路由</b> —— 主架构师判断任务类型：日常任务直办，正式创作进入四阶段管线，专项审校只调用审校角色。</figcaption>
+  </figure>
+
+  <figure>
+    <div class="fig-scroll">
+    <svg viewBox="0 0 880 756" role="img" aria-label="四阶段创作管线：检索调研、正文撰写、适用审校、采纳交付，主架构师居中决断">
+      <defs>
+        <marker id="a2n" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" class="mk"/>
+        </marker>
+        <marker id="a2q" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" class="mk-q"/>
+        </marker>
+        <marker id="a2l" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" class="mk-l"/>
+        </marker>
+        <marker id="a2z" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" class="mk-z"/>
+        </marker>
+      </defs>
+
+      <text x="24" y="62" class="t-h">阶段一</text>
+      <text x="24" y="80" class="t-sub">检索调研</text>
+      <text x="24" y="252" class="t-h">阶段二</text>
+      <text x="24" y="270" class="t-sub">正文撰写</text>
+      <text x="24" y="352" class="t-h">阶段三</text>
+      <text x="24" y="370" class="t-sub">适用审校</text>
+      <text x="24" y="672" class="t-h">阶段四</text>
+      <text x="24" y="690" class="t-sub">采纳与交付</text>
+
+      <!-- 阶段一 检索调研 -->
+      <path d="M580 40L580 24L205 24L205 50" class="edge" marker-end="url(#a2n)"/>
+      <text x="392" y="17" class="t-note mid">任一未明 · 退回定向检索</text>
+      <rect x="110" y="54" width="190" height="60" rx="10" class="bx b-qing"/>
+      <text x="205" y="79" class="t-name mid" style="font-size:12.5px">research-agent</text>
+      <text x="205" y="98" class="t-sub mid">三轮检索 · 研读正文</text>
+      <path d="M300 84L476 84" class="edge" marker-end="url(#a2n)"/>
+      <rect x="357" y="72" width="64" height="24" rx="12" class="pill-r"/>
+      <text x="389" y="88" class="mid" style="font-size:11px;font-weight:500;fill:var(--fg)">依据表</text>
+      <polygon points="480,84 580,40 680,84 580,128" class="bx b-zhu"/>
+      <text x="580" y="80" class="t-h mid" style="font-size:12.5px">主架构师</text>
+      <text x="580" y="97" class="t-sub mid">四问确认</text>
+      <path d="M389 96L389 144" class="edge-qing" marker-end="url(#a2q)"/>
+      <rect x="330" y="148" width="190" height="48" rx="10" class="bx b-qing dash"/>
+      <text x="425" y="168" class="t-name mid" style="font-size:12px">teahouse-chronicler</text>
+      <text x="425" y="186" class="t-note mid">增补节拍 · 伏笔 · 仅茶馆</text>
+      <path d="M520 172L576 172" class="edge-qing" marker-end="url(#a2q)"/>
+      <path d="M580 128L580 214L420 214L420 224" class="edge" marker-end="url(#a2n)"/>
+      <text x="500" y="207" class="t-note mid">合格依据表 · 方可开写</text>
+
+      <!-- 阶段二 正文撰写 -->
+      <rect x="110" y="252" width="180" height="52" rx="10" class="bx b-lv dash"/>
+      <text x="200" y="274" class="t-name mid" style="font-size:12px">character-actor</text>
+      <text x="200" y="292" class="t-note mid">难题预演 · 按需</text>
+      <path d="M290 278L336 278" class="edge-lv" marker-end="url(#a2l)"/>
+      <text x="313" y="270" class="t-note mid" style="font-size:9.5px">仅具体难题</text>
+      <rect x="340" y="228" width="200" height="60" rx="10" class="bx b-lv"/>
+      <text x="440" y="253" class="t-name mid">style-writer</text>
+      <text x="440" y="272" class="t-sub mid">独立统稿 · 全部正文</text>
+      <path d="M540 258L616 258" class="edge" marker-end="url(#a2n)"/>
+      <rect x="556" y="246" width="48" height="24" rx="12" class="pill-r"/>
+      <text x="580" y="262" class="mid" style="font-size:11px;font-weight:500;fill:var(--fg)">草稿</text>
+      <rect x="620" y="228" width="200" height="60" rx="10" class="bx b-zhu"/>
+      <text x="720" y="253" class="mid" style="font-family:'Noto Serif SC',serif;font-weight:700;font-size:12.5px;fill:var(--fg)">主架构师 · 通读核对</text>
+      <text x="720" y="272" class="t-sub mid">事实 · 格式 · 文学效果</text>
+
+      <!-- 阶段三 适用审校 -->
+      <path d="M720 288L720 330" class="edge"/>
+      <path d="M720 330L8 330" class="edge"/>
+      <path d="M720 330L810 330" class="edge"/>
+      <path d="M235 330L235 360" class="edge" marker-end="url(#a2n)"/>
+      <path d="M495 330L495 360" class="edge" marker-end="url(#a2n)"/>
+      <text x="600" y="322" class="t-note mid">并行分发</text>
+      <path d="M8 330L8 472L116 472" class="edge-zhe" marker-end="url(#a2z)"/>
+      <path d="M810 330L810 472L614 472" class="edge-zhe" marker-end="url(#a2z)"/>
+      <rect x="120" y="364" width="230" height="56" rx="10" class="bx b-zhe"/>
+      <text x="235" y="388" class="t-name mid" style="font-size:12.5px">tone-checker</text>
+      <text x="235" y="407" class="t-note mid">文风 · 语态 · 口癖</text>
+      <rect x="380" y="364" width="230" height="56" rx="10" class="bx b-zhe"/>
+      <text x="495" y="388" class="t-name mid" style="font-size:12.5px">crosslink-checker</text>
+      <text x="495" y="407" class="t-note mid">双链 · 底谱 · 旧文回填</text>
+      <rect x="120" y="444" width="230" height="56" rx="10" class="bx b-zhe dash"/>
+      <text x="235" y="468" class="t-name mid" style="font-size:12.5px">character-reviewer</text>
+      <text x="235" y="487" class="t-note mid">人物交锋 · 七维一致</text>
+      <rect x="380" y="444" width="230" height="56" rx="10" class="bx b-zhe dash"/>
+      <text x="495" y="468" class="t-name mid" style="font-size:12.5px">worldbuilding-consistency</text>
+      <text x="495" y="487" class="t-note mid">批量 · 跨卷统稿</text>
+      <path d="M120 392L88 392L88 524" class="edge"/>
+      <path d="M610 392L642 392L642 524" class="edge"/>
+      <path d="M235 500L235 524" class="edge"/>
+      <path d="M495 500L495 524" class="edge"/>
+      <path d="M88 524L696 524" class="edge" marker-end="url(#a2n)"/>
+      <rect x="300" y="512" width="60" height="24" rx="12" class="pill-r"/>
+      <text x="330" y="528" class="mid" style="font-size:11px;font-weight:500;fill:var(--fg)">报告</text>
+      <polygon points="600,568 700,524 800,568 700,612" class="bx b-zhu"/>
+      <text x="700" y="563" class="t-h mid" style="font-size:12.5px">主架构师</text>
+      <text x="700" y="581" class="t-sub mid">决断 · 修正</text>
+      <path d="M800 568L845 568L845 220L480 220L480 222" class="edge" marker-end="url(#a2n)"/>
+      <text x="700" y="188" class="t-note mid">严重 · 中等 → 修正后复审</text>
+      <path d="M700 612L700 650L260 650L260 668" class="edge" marker-end="url(#a2n)"/>
+      <text x="714" y="634" class="t-note">问题清零</text>
+
+      <!-- 阶段四 采纳与交付 -->
+      <rect x="120" y="672" width="280" height="64" rx="10" class="bx b-zhu"/>
+      <text x="260" y="698" class="t-h mid">回填 · 主架构师</text>
+      <text x="260" y="718" class="t-sub mid">旧文 · 时间线 · 伏笔台账 · 人物 MD/JSON</text>
+      <path d="M400 704L496 704" class="edge" marker-end="url(#a2n)"/>
+      <rect x="500" y="672" width="200" height="64" rx="10" class="bx b-zhu"/>
+      <text x="600" y="698" class="t-h mid">Git 提交并推送</text>
+      <text x="600" y="718" class="t-sub mid">仅暂存本轮修改文件</text>
+      <path d="M700 704L748 704" class="edge" marker-end="url(#a2n)"/>
+      <circle cx="758" cy="704" r="4" style="fill:var(--zhu)"/>
+      <text x="770" y="708" class="t-note">远程分支</text>
+    </svg>
+    </div>
+    <figcaption><b>图二 · 四阶段创作管线</b> —— 实线为必经流程，虚线为按条件启用的角色，线中药丸为阶段交付物；审校问题未清零则折返写手修订。</figcaption>
+  </figure>
+
+  <h2>调用纪律速览</h2>
+  <div class="rules">
+    <div class="rule rl-zhe">
+      <h3>只出报告</h3>
+      <p>research-agent 不写正文，四个审校角色不改稿；一切报告由主架构师决断、修正并落盘。</p>
+    </div>
+    <div class="rule rl-qing">
+      <h3>无据不开写</h3>
+      <p>依据表必须携带目标目录类别规范全文；四问未明即退回定向检索，不伪装既有设定。</p>
+    </div>
+    <div class="rule rl-lv">
+      <h3>正文唯一出口</h3>
+      <p>全部正式正文由 style-writer 独立统稿；character-actor 只做局部预演，不产出正式正文。</p>
+    </div>
+    <div class="rule rl-zhu">
+      <h3>交付即回填</h3>
+      <p>旧文、时间线、伏笔台账、人物 MD/JSON 同步更新后，仅提交本轮修改文件并推送。</p>
+    </div>
+  </div>
+
+  <footer>依据根目录 AGENTS.md 与 .codex/agents/ 八个角色配置绘制 · 主架构师为唯一落盘者</footer>
+</main>
